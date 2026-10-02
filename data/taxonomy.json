@@ -1,0 +1,234 @@
+{
+  "version": "2026-10-02",
+  "notes": "Hand-seeded from the US top_free + top_grossing charts of 2026-10-02. Mechanics describe the core loop a player repeats, not the theme or art style. An app may carry at most two. Apps that fit nothing here are assigned 'other' and reviewed manually rather than forced into the nearest entry. JSON rather than YAML so the pipeline stays stdlib-only.",
+  "mechanics": [
+    {
+      "id": "sort_into_containers",
+      "label": "Sort into containers",
+      "definition": "Move items between slots, tubes or shelves until each container holds one kind. Fixed board, no time pressure, failure by deadlock.",
+      "seed_apps": ["Magic Sort!", "Marble Sort! - Color Puzzle", "Goods Puzzle: Sort Challenge", "Fish Sort Puzzle - Bubble Jam", "Block Out! - Color Sort Puzzle", "Pocket Sort: Coin Merge Puzzle"]
+    },
+    {
+      "id": "block_fit_placement",
+      "label": "Block-fit placement",
+      "definition": "Drop irregular shapes onto a grid to clear full lines or regions. Endless, score-based, fails when no piece fits.",
+      "seed_apps": ["Block Blast！", "Woodoku Blast: Block Puzzle", "Block Crush！", "Sand Blocks: Drop Puzzle", "Cube Land Puzzle Game"]
+    },
+    {
+      "id": "jam_extraction",
+      "label": "Jam extraction / unblock",
+      "definition": "Slide or route blocking pieces out of a crowded board to free a target. Deterministic, solvable, puzzle-per-level.",
+      "seed_apps": ["Color Block Jam", "Colony Flow!", "Pixel Flow!", "Jam Bus:Sandfall", "Arrows – Puzzle Escape"]
+    },
+    {
+      "id": "traffic_routing",
+      "label": "Traffic routing",
+      "definition": "Direct queues of passengers or vehicles to correct destinations under mounting congestion.",
+      "seed_apps": ["Bus Traffic Fever!", "Bus Fever Party!"]
+    },
+    {
+      "id": "triple_match_3d",
+      "label": "Triple match (3D objects)",
+      "definition": "Tap three identical objects from a cluttered pile into a limited tray. Fails when the tray fills.",
+      "seed_apps": ["Match Factory!", "Triple Match 3D", "Triple Match City", "Matching Story - Merge & Match", "Food Hunt: Pixel Puzzle"]
+    },
+    {
+      "id": "match3_swap",
+      "label": "Match-3 swap",
+      "definition": "Swap adjacent tiles on a grid to form lines of three or more, with cascades and power-ups, across authored levels.",
+      "seed_apps": ["Candy Crush Saga", "Royal Match", "Homescapes: Match 3 Games", "Toon Blast", "Royal Kingdom", "Jelly Busters: Puzzle Game"]
+    },
+    {
+      "id": "merge_progression",
+      "label": "Merge with meta-progression",
+      "definition": "Combine pairs into higher tiers on a persistent board that gates a story or renovation over days and weeks.",
+      "seed_apps": ["Gossip Harbor®: Merge & Story", "Merge Mansion: Puzzles & Story", "Travel Town - Merge Adventure", "Tasty Travels: Merge Game", "Seaside Escape®: Merge & Story", "Hotel Legacy: Merge Game"]
+    },
+    {
+      "id": "mahjong_tile_match",
+      "label": "Mahjong tile match",
+      "definition": "Clear a layered tile layout by pairing free tiles. Fixed deal, solvable or not from the start.",
+      "seed_apps": ["Vita Mahjong", "Mahjong Blast", "Mahjong Rumble: Win Real Cash", "Mahjong Clash: Win Real Cash"]
+    },
+    {
+      "id": "solitaire_card",
+      "label": "Solitaire card play",
+      "definition": "Single-player card clearing from a shuffled deal (klondike, tripeaks, pyramid).",
+      "seed_apps": ["Solitaire Cash: Win Real Money", "Solitaire Smash: Real Cash!", "Disney Solitaire", "Solitaire Associations Journey", "Jigsaw Drop: Solitaire Puzzle"]
+    },
+    {
+      "id": "bingo_draw",
+      "label": "Bingo / number draw",
+      "definition": "Mark called numbers on cards against a timer, with speed and multi-card handling as the skill expression.",
+      "seed_apps": ["Bingo Cash - Win Real Money", "Bingo Blitz™ - BINGO Games", "Bingo Voyage: Live Bingo Games"]
+    },
+    {
+      "id": "casino_slots",
+      "label": "Casino slots",
+      "definition": "Spin-based chance outcomes with no skill expression. Included for completeness and flagged as chance-framed.",
+      "seed_apps": ["Slotomania™ Slots Machine Game", "Jackpot Magic Slots & Casino", "Cash Frenzy™ - Slots Casino", "Lightning Link Casino Slots", "Heart of Vegas - Casino Slots"]
+    },
+    {
+      "id": "screw_unfasten",
+      "label": "Screw / unfasten",
+      "definition": "Remove pins or screws in the right order so a structure disassembles without jamming. Deterministic and solvable.",
+      "seed_apps": ["Screwdom"]
+    },
+    {
+      "id": "physics_demolition",
+      "label": "Physics demolition",
+      "definition": "Fire or place a limited force and let physics resolve the outcome. Aim and timing are the skill.",
+      "seed_apps": ["Smash Fest!", "Royal Smash! - Physics Puzzle", "Castle Busters", "Bloons Blitz"]
+    },
+    {
+      "id": "hole_absorb",
+      "label": "Hole / absorb-and-grow",
+      "definition": "Steer a growing hole or mass that consumes objects within a round timer.",
+      "seed_apps": ["All in Hole: Black Hole Games", "Hole Stars: Puzzle Game"]
+    },
+    {
+      "id": "territory_io",
+      "label": "Territory capture (.io)",
+      "definition": "Claim area on a shared board while avoiding elimination. Short rounds, direct opposition.",
+      "seed_apps": ["Paper.io 2", "82-0.com"]
+    },
+    {
+      "id": "crowd_control",
+      "label": "Crowd / unit funnel",
+      "definition": "Route a growing mass of units through gates that multiply or cull them toward a target.",
+      "seed_apps": ["Mob Control"]
+    },
+    {
+      "id": "endless_runner",
+      "label": "Endless runner",
+      "definition": "Auto-forward movement with lane dodging and collection. Score is distance or pickups.",
+      "seed_apps": ["Subway Surfers", "Minion Rush: Running game", "Sled Surfers"]
+    },
+    {
+      "id": "rhythm_tap",
+      "label": "Rhythm tap",
+      "definition": "Tap in time with a track. Precision and consistency are the only variables.",
+      "seed_apps": ["Magic Tiles 3™: Piano Game"]
+    },
+    {
+      "id": "music_trivia",
+      "label": "Audio guessing / trivia",
+      "definition": "Identify a song or answer from a short audio or text clue, scored on speed and accuracy.",
+      "seed_apps": ["Songless: Guess the Song!"]
+    },
+    {
+      "id": "word_grid",
+      "label": "Word formation",
+      "definition": "Build or find words from a letter set or grid against a target list.",
+      "seed_apps": ["Wordscapes - Word Game", "Word Search Explorer®", "Word Tiles - Relaxing Puzzle", "NYT Games: Wordle & Crossword"]
+    },
+    {
+      "id": "logic_deduction",
+      "label": "Logic deduction grid",
+      "definition": "Fill a grid by constraint satisfaction with a single correct solution. Purely deterministic.",
+      "seed_apps": ["Sudoku.com - Number Games", "Meowdoku!"]
+    },
+    {
+      "id": "brain_teaser",
+      "label": "Brain teaser / lateral puzzle",
+      "definition": "Short one-off puzzles with trick solutions, loosely connected, novelty-driven.",
+      "seed_apps": ["Brain Puzzle 2: Logic Twist", "Brain Puzzle 3: Crazy Mind"]
+    },
+    {
+      "id": "hidden_object",
+      "label": "Hidden object search",
+      "definition": "Find named items in a dense scene against a timer. Visual scanning speed is the skill.",
+      "seed_apps": ["Search It - Hidden Objects", "Find Hidden Objects - Spot It!"]
+    },
+    {
+      "id": "spatial_rotation",
+      "label": "Spatial rotation / alignment",
+      "definition": "Rotate or slide pieces until a pattern aligns. Deterministic, single solution.",
+      "seed_apps": ["Rotate Rings", "CubeAway - 3DPuzzle", "Color Slide - Hexa Puzzle", "Amaze GO!", "Yarn Loop: Knit Puzzle"]
+    },
+    {
+      "id": "coloring_art",
+      "label": "Coloring / art completion",
+      "definition": "Fill regions by number or palette. Relaxation-led, no fail state.",
+      "seed_apps": ["Colorever: Gem Art Puzzle", "Jewel Coloring"]
+    },
+    {
+      "id": "cue_sports",
+      "label": "Cue sports",
+      "definition": "Aim-and-power physics shots in turn-based opposition. Established 1v1 skill format.",
+      "seed_apps": ["8 Ball Pool™"]
+    },
+    {
+      "id": "abstract_strategy",
+      "label": "Abstract strategy board",
+      "definition": "Perfect-information turn-based board games with deep skill ceilings and established rating systems.",
+      "seed_apps": ["Chess.com - Play and Learn"]
+    },
+    {
+      "id": "sports_sim",
+      "label": "Licensed sports simulation",
+      "definition": "Team or player sports sims built on real-world licences.",
+      "seed_apps": ["EA SPORTS FC Soccer Mobile 27", "EA College Football Mobile 27", "eFootball™", "Golf Clash - Golfing Simulator"]
+    },
+    {
+      "id": "board_roll_raid",
+      "label": "Dice-roll board raid",
+      "definition": "Spin or roll to advance a board track, collecting and raiding other players' builds. Chance-driven with a social layer.",
+      "seed_apps": ["MONOPOLY GO!", "Coin Master", "Dice Dreams™"]
+    },
+    {
+      "id": "farm_city_sim",
+      "label": "Farm / city builder sim",
+      "definition": "Timer-gated production chains and layout management over weeks.",
+      "seed_apps": ["Township", "Hay Day", "Sunday City: Life Simulator"]
+    },
+    {
+      "id": "survival_4x",
+      "label": "Survival 4X / base war",
+      "definition": "Base building, troop training and alliance warfare on a persistent shared map. Horizon measured in months.",
+      "seed_apps": ["Whiteout Survival", "Kingshot", "Last War:Survival", "Last Z: Survival Shooter", "Evony", "Total Battle: War Strategy", "Age of Origins:Tower Defense"]
+    },
+    {
+      "id": "arena_brawler",
+      "label": "Real-time arena brawler",
+      "definition": "Short synchronous multiplayer matches with collectible units and ladders.",
+      "seed_apps": ["Brawl Stars", "Clash Royale", "Mobile Legends: Bang Bang.US"]
+    },
+    {
+      "id": "battle_royale_shooter",
+      "label": "Shooter / battle royale",
+      "definition": "Real-time competitive shooting in large synchronous matches.",
+      "seed_apps": ["Call of Duty®: Mobile", "PUBG MOBILE", "Fortnite", "Free Fire x NARUTO SHIPPUDEN", "Warline: Sniper Strike", "Hunting Sniper"]
+    },
+    {
+      "id": "gacha_rpg",
+      "label": "Gacha RPG",
+      "definition": "Character collection via randomised pulls, with teams progressed through authored content.",
+      "seed_apps": ["Honkai: Star Rail", "Wuthering Waves", "DRAGON BALL LEGENDS", "DRAGON BALL Z DOKKAN BATTLE", "Aniimo"]
+    },
+    {
+      "id": "digital_tcg",
+      "label": "Digital trading card game",
+      "definition": "Deck construction plus turn-based duelling, with collection as the monetisation layer.",
+      "seed_apps": ["Pokémon TCG Pocket", "Magic: The Gathering Arena", "CrownCards - Trading Cards"]
+    },
+    {
+      "id": "sandbox_ugc",
+      "label": "Sandbox / user-generated worlds",
+      "definition": "Open creation and social play inside player-made content.",
+      "seed_apps": ["Roblox", "Minecraft: Play with Friends!", "OneState RP: Role Play Online"]
+    },
+    {
+      "id": "social_deduction",
+      "label": "Social deduction",
+      "definition": "Hidden-role play among a group, resolved by discussion and voting.",
+      "seed_apps": ["Among Us!"]
+    },
+    {
+      "id": "skill_cash_arcade",
+      "label": "Skill-cash arcade portfolio",
+      "definition": "Multi-game wrappers whose product is the cash tournament layer rather than any one game. Direct competitors to Blitz.",
+      "seed_apps": ["Triumph Arcade", "Playtest Pro by BestPlay"]
+    }
+  ]
+}
