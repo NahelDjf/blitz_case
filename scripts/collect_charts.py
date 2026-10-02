@@ -24,13 +24,11 @@ from __future__ import annotations
 
 import argparse
 import json
-import random
 import sys
 import time
-import urllib.error
-import urllib.request
 from datetime import datetime, timezone
-from pathlib import Path
+
+from common import CHARTS_DIR, REPO_ROOT, RUNS_LOG, fetch_json, label
 
 GAMES_GENRE_ID = 6014
 
@@ -45,39 +43,6 @@ CHARTS = {
     # to fail so the manifest records whether that is still true.
     "top_grossing": ("topgrossingapplications", "top-grossing"),
 }
-
-USER_AGENT = "blitz-scout/0.1 (case study; contact: nahel)"
-TIMEOUT_S = 20
-MAX_ATTEMPTS = 3
-
-REPO_ROOT = Path(__file__).resolve().parents[1]
-CHARTS_DIR = REPO_ROOT / "data" / "charts"
-RUNS_LOG = REPO_ROOT / "data" / "_runs.jsonl"
-
-
-# --------------------------------------------------------------------------
-# fetching
-# --------------------------------------------------------------------------
-
-def fetch_json(url: str) -> dict:
-    """GET a JSON document, retrying on transient errors with backoff."""
-    last_error: Exception | None = None
-    for attempt in range(1, MAX_ATTEMPTS + 1):
-        try:
-            request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-            with urllib.request.urlopen(request, timeout=TIMEOUT_S) as response:
-                return json.loads(response.read().decode("utf-8"))
-        except urllib.error.HTTPError as exc:
-            last_error = exc
-            # 4xx other than 429 will not fix itself; stop early.
-            if exc.code != 429 and 400 <= exc.code < 500:
-                break
-        except Exception as exc:  # noqa: BLE001 - network layer, log and retry
-            last_error = exc
-        if attempt < MAX_ATTEMPTS:
-            time.sleep(attempt * 2 + random.random())
-    raise RuntimeError(f"{type(last_error).__name__}: {last_error}") from last_error
-
 
 def legacy_url(country: str, chart_segment: str, limit: int) -> str:
     return (
@@ -97,12 +62,6 @@ def v2_url(country: str, chart_segment: str, limit: int) -> str:
 # normalisation - both feeds collapse into one record shape
 # --------------------------------------------------------------------------
 
-def _label(node, key: str = "label"):
-    if isinstance(node, dict):
-        return node.get(key)
-    return None
-
-
 def parse_legacy(payload: dict) -> list[dict]:
     entries = payload.get("feed", {}).get("entry", [])
     if isinstance(entries, dict):  # limit=1 returns an object, not a list
@@ -120,11 +79,11 @@ def parse_legacy(payload: dict) -> list[dict]:
             {
                 "rank": position,
                 "app_id": str(app_id),
-                "app_name": _label(entry.get("im:name")),
-                "artist_name": _label(artist),
+                "app_name": label(entry.get("im:name")),
+                "artist_name": label(artist),
                 "artist_id": (artist.get("attributes", {}) or {}).get("href"),
-                "app_url": _label(identifier),
-                "release_date": _label(entry.get("im:releaseDate")),
+                "app_url": label(identifier),
+                "release_date": label(entry.get("im:releaseDate")),
                 "genre_id": str(category.get("im:id")) if category.get("im:id") else None,
                 "genre_name": category.get("term"),
             }
