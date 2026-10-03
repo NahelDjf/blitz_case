@@ -1,0 +1,170 @@
+{
+  "version": "2026-10-03",
+  "notes": "Scores how convertible a mechanic is into a Blitz cash tournament. Two kinds of dimension: GATES, where a low score disqualifies the mechanic outright no matter how well it does elsewhere, and WEIGHTED dimensions that trade off against each other. Written as data rather than prose inside a prompt so the criteria can be reviewed, versioned and argued with. Every score must carry a justification and the app_id of a carrier that evidences it.",
+
+  "gating_rule": "If any gate dimension scores <= its fail_below value, convertibility_total is set to 0 and the mechanic is reported as REJECTED with the failing gate named. Gates are not averaged in - a mechanic that cannot be run fairly is not partially convertible.",
+
+  "dimensions": [
+    {
+      "id": "symmetric_seeding",
+      "label": "Symmetric randomness",
+      "type": "gate",
+      "fail_below": 2,
+      "question": "Can both players face an identical randomised instance - same seed, same deal, same sequence - so that luck cancels out and the score gap reflects skill alone?",
+      "note": "This is the criterion, not 'is it deterministic'. Solitaire and Bingo contain randomness and still work, because both players get the same shuffle or the same draw. Poker cannot: you cannot deal two opponents the same hand, and the asymmetry is the game.",
+      "anchors": {
+        "1": "Outcome is chance with no skill expression at all (slot spin), or players structurally cannot share an instance (hidden private information, asymmetric draws).",
+        "2": "Randomness occurs mid-round in response to player action and cannot be replayed identically for an opponent.",
+        "3": "Shareable in principle but needs engineering: procedural generation would have to be refactored to accept an external seed.",
+        "4": "Randomness is confined to the initial board or deal, which is trivially seedable.",
+        "5": "Fully deterministic or already seeded; two players can be handed a provably identical instance."
+      }
+    },
+    {
+      "id": "score_comparability",
+      "label": "Score comparability",
+      "type": "gate",
+      "fail_below": 2,
+      "question": "Does a round produce a single numeric score that can be ranked directly against another player's score on the same instance?",
+      "anchors": {
+        "1": "No score at all, or progress is a persistent state rather than a round outcome (renovation progress, collection completeness).",
+        "2": "Binary win/lose only, with no margin - produces unbreakable ties at scale.",
+        "3": "A score exists but is dominated by time spent or purchases rather than play quality.",
+        "4": "Clean numeric score; ties possible but resolvable by a secondary criterion such as completion time.",
+        "5": "Continuous score with natural tiebreakers, already presented to the player as a round result."
+      }
+    },
+    {
+      "id": "round_length",
+      "label": "Round length",
+      "type": "weighted",
+      "weight": 0.20,
+      "question": "How long does one complete, scoreable round take?",
+      "note": "Blitz's economics need a deposit to convert into several rounds in one sitting. A 40-minute round is not a tournament format.",
+      "anchors": {
+        "1": "Hours, or no round boundary at all - play is continuous or session-less.",
+        "2": "15-40 minutes per round.",
+        "3": "5-15 minutes, or variable with a long tail.",
+        "4": "2-5 minutes, consistent.",
+        "5": "Under 2 minutes, tightly bounded by a timer or a fixed board."
+      }
+    },
+    {
+      "id": "skill_expression",
+      "label": "Skill expression",
+      "type": "weighted",
+      "weight": 0.25,
+      "question": "Within a single round on a fixed instance, does the better player reliably post the better score?",
+      "note": "The highest-weighted dimension. It is what makes the product legally skill gaming rather than gambling, and what makes repeat play rational for a good player.",
+      "anchors": {
+        "1": "Outcome independent of player decisions.",
+        "2": "Skill affects outcome only over many rounds; single-round variance swamps it.",
+        "3": "Skill is visible but a weak player wins a single round often.",
+        "4": "Clear skill gradient within one round; upsets are uncommon.",
+        "5": "Strong, immediately legible skill gradient - speed, accuracy or planning quality dominate the score."
+      }
+    },
+    {
+      "id": "learnability",
+      "label": "Learnability",
+      "type": "weighted",
+      "weight": 0.15,
+      "question": "Can a new player be competent enough to enjoy a paid round after one practice round?",
+      "note": "Directly drives deposit-to-first-match friction.",
+      "anchors": {
+        "1": "Requires studying systems or meta knowledge before play makes sense.",
+        "2": "Needs a multi-level tutorial sequence.",
+        "3": "Needs one guided tutorial round.",
+        "4": "Rules are obvious from the first screen; mastery is deep but entry is immediate.",
+        "5": "Universally known rules needing no explanation at all (solitaire, bingo, pool)."
+      }
+    },
+    {
+      "id": "async_viability",
+      "label": "Asynchronous viability",
+      "type": "weighted",
+      "weight": 0.15,
+      "question": "Can the match run as two independent rounds scored and compared afterwards, rather than requiring both players live at the same moment?",
+      "note": "Async removes matchmaking latency, lobby abandonment and server cost, and lets a tournament fill over hours instead of seconds.",
+      "anchors": {
+        "1": "Requires real-time interaction between players; the opponent's actions change your board.",
+        "2": "Real-time by design but a turn-based variant is conceivable with heavy redesign.",
+        "3": "Turn-based against a live opponent; playable async with a move-timer and abandonment handling.",
+        "4": "Fully solo play; the comparison is purely score-against-score after the fact.",
+        "5": "Fully solo, short, and already presented to players as a personal-best score chase."
+      }
+    },
+    {
+      "id": "content_cost",
+      "label": "Content cost",
+      "type": "weighted",
+      "weight": 0.10,
+      "question": "How expensive is it to keep supplying fresh, fair instances at tournament volume?",
+      "anchors": {
+        "1": "Every instance is hand-authored and consumed once; content is the whole product.",
+        "2": "Hand-authored levels with limited procedural reuse.",
+        "3": "Mixed: procedural generation exists but needs curation for fairness or difficulty.",
+        "4": "Procedural with a solvability or difficulty check.",
+        "5": "Infinite and self-balancing from a seed; no authored content needed."
+      }
+    },
+    {
+      "id": "ip_risk",
+      "label": "IP and licence risk",
+      "type": "weighted",
+      "weight": 0.15,
+      "question": "Can the mechanic be operated without licensed brands, characters or sports rights?",
+      "note": "Inverted: 5 means low risk.",
+      "anchors": {
+        "1": "The mechanic is inseparable from a licence - real sports teams, a film franchise, a character roster.",
+        "2": "Dominant carriers are licensed; an unlicensed version would lose most of the appeal.",
+        "3": "Mixed field; some carriers licensed, some not.",
+        "4": "Generic mechanic with incidental theming; one or two carriers hold distinctive trade dress to avoid.",
+        "5": "Public-domain or universal rules with no distinctive protected expression."
+      }
+    }
+  ],
+
+  "risk_flags": [
+    {
+      "id": "chance_framing",
+      "label": "Gambling adjacency",
+      "question": "Independently of the mechanics, does the mechanic READ as a casino product to a player, a platform reviewer or a regulator?",
+      "note": "Scored separately from convertibility because it is a presentation and compliance risk rather than a design property. Blitz positions explicitly away from a 'win big' casino pitch, so a mechanic that looks like gambling is a brand problem even when it is provably skill-based. Not legal advice - a flag for a human to check.",
+      "anchors": {
+        "1": "No casino association whatsoever.",
+        "2": "Faint association through imagery or terminology only.",
+        "3": "Shares surface features with casino products (chips, reels, jackpots) without the structure.",
+        "4": "Commonly offered in real-money gambling venues.",
+        "5": "Is a casino game."
+      }
+    }
+  ],
+
+  "excluded_mechanics": {
+    "skill_cash_arcade": "Not a gameplay loop. These are cash-tournament wrappers around other people's mechanics - direct competitors rather than opportunities. Carried as the is_skill_cash flag on their apps instead.",
+    "casino_slots": "Fails symmetric_seeding and skill_expression outright. Scored and reported as REJECTED rather than omitted, so the rejection is visible."
+  },
+
+  "blitz_portfolio": {
+    "note": "Mechanics Blitz already operates or builds on. Used for the already-yours quadrant and as the known-positive set in the eval harness: these must score in the top decile or the weights are wrong.",
+    "mechanic_ids": [
+      "bingo_draw",
+      "solitaire_card",
+      "cue_sports",
+      "match3_swap",
+      "block_fit_placement",
+      "physics_demolition",
+      "territory_io"
+    ]
+  },
+
+  "output_contract": {
+    "note": "Every dimension must return all three fields. A score without evidence is an opinion with a number attached.",
+    "fields": {
+      "score": "integer 1-5",
+      "justification": "one sentence, under 25 words, stating why this score and not the one above or below",
+      "evidence_app_id": "app_id of a carrier whose description or reviews support this score, or null with justification starting 'no carrier evidence:'"
+    }
+  }
+}

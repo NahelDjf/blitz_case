@@ -126,6 +126,9 @@ def main() -> int:
     parser.add_argument("--limit", type=int, default=None, help="cap app count (for testing)")
     parser.add_argument("--force", action="store_true", help="reclassify cached apps")
     parser.add_argument("--sleep", type=float, default=0.5)
+    parser.add_argument(
+        "--chart-date", default=None, help="YYYY-MM-DD snapshot; defaults to newest on disk"
+    )
     args = parser.parse_args()
 
     if "ANTHROPIC_API_KEY" not in os.environ:
@@ -142,10 +145,16 @@ def main() -> int:
     )
     system_prompt = SYSTEM_TEMPLATE.format(taxonomy=taxonomy_text)
 
-    chart_path = latest_chart_file()
-    if chart_path is None:
-        print("No chart snapshot found.", file=sys.stderr)
-        return 1
+    if args.chart_date:
+        chart_path = DATA_DIR / "charts" / f"{args.chart_date}.jsonl"
+        if not chart_path.exists():
+            print(f"No snapshot for {args.chart_date}.", file=sys.stderr)
+            return 1
+    else:
+        chart_path = latest_chart_file()
+        if chart_path is None:
+            print("No chart snapshot found.", file=sys.stderr)
+            return 1
     chart_rows = read_jsonl(chart_path)
     in_scope = {
         row["app_id"]
