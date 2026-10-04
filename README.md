@@ -59,7 +59,6 @@ whole application.
 
 ### Rebuilding from the committed data
 
-Deterministic, free, instant — no API calls:
 
 ```bash
 python3 scripts/aggregate_mechanics.py --chart-date 2026-10-03
@@ -67,13 +66,10 @@ python3 scripts/build_scores.py
 python3 scripts/build_ui.py
 ```
 
-Requires Python 3.9+ and **nothing else**. No `pip install`, no virtualenv. Every
-script uses only the standard library, including the Anthropic API client.
 
 ### Refreshing from Apple and re-scoring
 
-Needs an API key. Costs about $8 for a cold run; re-runs are near-free because every
-stage caches.
+Needs an API key (here it's Anthropic but whatever)
 
 ```bash
 export ANTHROPIC_API_KEY="sk-ant-..."
@@ -141,9 +137,9 @@ Convertibility is a **multiplier, not a term**. Fail a gate and the score is zer
 regardless of demand. This single line of arithmetic is the entire thesis.
 
 **A daily GitHub Action** (`.github/workflows/collect-charts.yml`) snapshots the
-charts at 06:17 UTC and commits the result back to this repository. It has been
+charts in the morning and commits the result back to this repository. It has been
 running since the first commit, because rank history cannot be backfilled. You will
-therefore see commits landing after the submission date — that is deliberate, and it
+therefore see commits landing after the submission date, and it
 is what makes the momentum work in [next steps](#what-i-would-build-with-one-more-week)
 provisioned rather than hypothetical.
 
@@ -164,11 +160,11 @@ that.
 
 ### 2. The gates are **symmetric randomness**, not determinism
 
-The critical criterion. Blitz's own site says it best:
+The critical criterion. Blitz's own site:
 
 > *Compete on a level playing field where every player faces the exact same challenge.*
 
-So the question is **not** "is this mechanic random?" — Solitaire has a shuffled deal
+So the question is **not** "is this mechanic random?". Indeed Solitaire has a shuffled deal
 and Bingo has drawn numbers, and Blitz runs both. The question is whether **both
 players can be handed an identical randomised instance**, so variance cancels and the
 score gap is skill.
@@ -184,8 +180,7 @@ That distinction decides real cases:
 
 A naive "deterministic vs random" gate would have rejected half of Blitz's actual
 portfolio. The second gate, **score comparability**, asks whether a round yields one
-number rankable against an opponent's — which is why chess is rejected despite being
-the canonical skill game.
+number rankable against an opponent's.
 
 ### 3. Gates are vetoes, not weights
 
@@ -198,8 +193,8 @@ dimensions sum to 1.0, with `skill_expression` weighted highest at 0.25.
 
 Same data, opposite meaning. An ordinary carrier is evidence of **saturation**; a
 cash-tournament carrier is evidence the **conversion works**. Blended, Mahjong looks
-crowded. Split, it reads as proven demand with two rivals already live — which is the
-most actionable line in the whole output.
+crowded. Split, it reads as proven demand with two rivals already live (which is the
+most actionable line in the whole output).
 
 This produces four groupings, which matter more than the ranking because each implies
 a different decision: *already operated*, *proven by a competitor* (fast follow),
@@ -223,14 +218,14 @@ machine that is not mine.
 
 Premium monetisation is *opposed* to Blitz's, not merely different: a player paying
 upfront is buying out of ads and IAP. The chart is also IP-dominated, session-long,
-and barely moves month to month — so as a *trend* source it contributes nothing.
+and barely moves month to month, so as a *trend* source it contributes nothing.
 Collection continues because the counter-argument is real and deserves its own study.
 
 ---
 
 ## Key technical decisions
 
-### Standard library only — including the API client
+### Standard library only (including the API client)
 
 "A working application, easy to run locally" is a grading criterion, and dependency resolution is the most common way that fails on
 someone else's machine. The retry and backoff logic an SDK would provide lives in
@@ -238,9 +233,9 @@ someone else's machine. The retry and backoff logic an SDK would provide lives i
 
 ### A static HTML file rather than a server
 
-Baking the data into `app.html` means it opens on a double-click, works offline, and
+Baking the data into `app.html` means it opens easy, works offline, and
 cannot fail because of an environment difference. The risk is duplicating the scoring
-logic in two languages where they can drift — avoided by precomputing all four
+logic in two languages where they can drift, avoided by precomputing all four
 components in Python and leaving the page only the final weighted sum, four
 multiplications.
 
@@ -254,7 +249,7 @@ We prefer legacy, fall back to v2, and record which source answered on every row
 ### Pinned runs and loud coverage reporting
 
 Each pipeline stage originally resolved "the newest chart" independently, and the
-daily Action moved that target mid-build — the aggregation silently analysed one day's
+daily Action moved that target mid-build, the aggregation silently analysed one day's
 162 apps using the previous day's classifications. Three fixes, all shipped:
 
 1. `--chart-date` on every stage, so a run is reproducible.
@@ -274,7 +269,7 @@ endpoint.
 
 The reviews feed intermittently returns a **valid but empty** response under load,
 indistinguishable from an app genuinely having no reviews. Six of 164 apps were
-affected on the first run, including 8 Ball Pool (4.8M ratings) — one of the
+affected on the first run, including 8 Ball Pool (4.8M ratings), one of the
 known-positive mechanics. Caching that empty result would have frozen a permanent
 hole. The fix: retry with a pause and an alternate sort, **only when the previous page
 was full** (an exhausting feed returns a partial page first), and never cache an empty
@@ -307,7 +302,7 @@ Scoring that cannot be checked is an opinion with a number attached.
 
 **Self-consistency.** Every mechanic is scored three times; the median is reported and
 the spread drives a confidence badge. Spread was 0–1 on almost every dimension. Where
-it was higher it was informative rather than noisy — `casino_slots` round length came
+it was higher it was informative rather than noisy : `casino_slots` round length came
 back 3/5/3, the model genuinely torn between "a spin takes seconds" and "there is no
 round at all." A `temperature` parameter was not supported by
 the models used, so this measures judgement stability rather than decoder determinism,
@@ -319,7 +314,7 @@ which is closer to what the metric is for.
 ### The one case where evaluation disagreed with ground truth
 
 `territory_io` (Paper.io-style) was in my known-positive list and the rubric **rejected
-it** on symmetric randomness — a shared .io board means the opponent's expansion *is*
+it** on symmetric randomness basis, a shared .io board means the opponent's expansion *is*
 your instance, so no identical instance exists.
 
 Investigating, the rubric was right and my ground truth was imprecise. Blitz's
@@ -332,27 +327,25 @@ now split in `rubric.json`, and only the first is the benchmark.
 
 ## Known limitations
 
-Most were found by measuring rather than by guessing.
-
 **Data**
 
 1. **Review volume comes from `userRatingCount`, never from the review files.** The
    pull is capped at 500 per app and ~70% of apps hit it, so the time span covered
-   varies from hours to weeks. Rates over the sample are valid; counts would be
+   varies from hours to weeks. Rates over the sample are valid while counts would be
    measuring the cap.
-2. **One day of data.** Momentum features are defined but unpopulated — rank deltas do
-   not exist on a single snapshot.
-3. **Three apps resist classification** (NoomiClone, Lordrush, 82-0.com) and are hand-labelled in data/overrides.json, applied visibly and stamped human_override. NoomiClone is deliberately left as unclassified — 318 ratings inside the US top 100 is a chart anomaly rather than a mechanic.
+2. **One day of data.** Momentum features are defined but unpopulated (rank deltas do
+   not exist on a single snapshot).
+3. **Three apps resist classification** (NoomiClone, Lordrush, 82-0.com) and are hand-labelled in data/overrides.json, applied visibly and stamped human_override. NoomiClone is deliberately left as unclassified since 318 ratings inside the US top 100 is a chart anomaly rather than a mechanic.
 
 **Measurement**
 
 4. **Mean star rating is reported but not scored.** The observed range across 44
-   mechanics is 4.0–4.93, nearly all between 4.6 and 4.9 — App Store ratings are
+   mechanics is 4.0–4.93, nearly all between 4.6 and 4.9, App Store ratings are
    compressed by prompt-gating. The "high rank + mediocre rating = unmet demand"
    heuristic has no signal to detect. Cut after measuring it.
 5. **Latent competitive demand is a measured null.** I expected reviews to show players
    asking for head-to-head play. Across six probe apps including the two largest solo
-   puzzles on the chart, `wants_competition` was **0%**. The base rate is under 1% —
+   puzzles on the chart, `wants_competition` was **0%**. The base rate is under 1%, it's
    too rare to score. What players *do* say, at 12–43% for ads, 6–26% for paywalls and
    3–16% for perceived cheating, reframes the opportunity: the wedge is not "come
    compete", it is "no ads, no bots, real stakes". Which is, independently, how Blitz
@@ -363,7 +356,7 @@ Most were found by measuring rather than by guessing.
 7. **Voice signals need ≥50 reviews**; thin apps are marked insufficient rather than
    scored, and mechanic rates pool across carriers weighted by review count.
 8. **US-storefront reviews are substantially multilingual.** Signals are classified by
-   LLM rather than keyword matching, which would silently undercount Spanish.
+   LLM rather than keyword matching, which would silently undercount Spanish & other languages.
 
 **Judgement**
 
@@ -417,7 +410,7 @@ on day one rather than when the analysis was written.
 
 The chart collector was written first and deployed before anything else, because rank
 history is the one input that cannot be recovered later. Data collection has therefore
-been running longer than the analysis took to write — deliberately.
+been running longer than the analysis took to write.
 
 Where the time went: roughly a third on the pipeline, a third on the taxonomy and
 rubric (the two artifacts that carry the product judgement), and a third on scoring
