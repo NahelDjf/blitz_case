@@ -1,9 +1,7 @@
 {
   "version": "2026-10-03",
   "notes": "Scores how convertible a mechanic is into a Blitz cash tournament. Two kinds of dimension: GATES, where a low score disqualifies the mechanic outright no matter how well it does elsewhere, and WEIGHTED dimensions that trade off against each other. Written as data rather than prose inside a prompt so the criteria can be reviewed, versioned and argued with. Every score must carry a justification and the app_id of a carrier that evidences it.",
-
   "gating_rule": "If any gate dimension scores <= its fail_below value, convertibility_total is set to 0 and the mechanic is reported as REJECTED with the failing gate named. Gates are not averaged in - a mechanic that cannot be run fairly is not partially convertible.",
-
   "dimensions": [
     {
       "id": "symmetric_seeding",
@@ -38,7 +36,7 @@
       "id": "round_length",
       "label": "Round length",
       "type": "weighted",
-      "weight": 0.20,
+      "weight": 0.2,
       "question": "How long does one complete, scoreable round take?",
       "note": "Blitz's economics need a deposit to convert into several rounds in one sitting. A 40-minute round is not a tournament format.",
       "anchors": {
@@ -98,7 +96,7 @@
       "id": "content_cost",
       "label": "Content cost",
       "type": "weighted",
-      "weight": 0.10,
+      "weight": 0.1,
       "question": "How expensive is it to keep supplying fresh, fair instances at tournament volume?",
       "anchors": {
         "1": "Every instance is hand-authored and consumed once; content is the whole product.",
@@ -124,7 +122,6 @@
       }
     }
   ],
-
   "risk_flags": [
     {
       "id": "chance_framing",
@@ -140,14 +137,23 @@
       }
     }
   ],
-
   "excluded_mechanics": {
     "skill_cash_arcade": "Not a gameplay loop. These are cash-tournament wrappers around other people's mechanics - direct competitors rather than opportunities. Carried as the is_skill_cash flag on their apps instead.",
     "casino_slots": "Fails symmetric_seeding and skill_expression outright. Scored and reported as REJECTED rather than omitted, so the rejection is visible."
   },
-
   "blitz_portfolio": {
-    "note": "Mechanics Blitz already operates or builds on. Used for the already-yours quadrant and as the known-positive set in the eval harness: these must score in the top decile or the weights are wrong.",
+    "note": "Split deliberately. operated_mechanics are run as cash tournaments and are the known-positive benchmark for the eval harness. ua_reference_mechanics are familiar to Blitz's audience and used as acquisition reference points, but are NOT necessarily convertible - territory_io fails symmetric_seeding because a shared .io board makes the opponent's actions part of your instance. Conflating the two would make the eval harness fail for a definitional reason rather than a scoring one.",
+    "operated_mechanics": [
+      "bingo_draw",
+      "solitaire_card",
+      "cue_sports",
+      "match3_swap",
+      "block_fit_placement"
+    ],
+    "ua_reference_mechanics": [
+      "territory_io",
+      "physics_demolition"
+    ],
     "mechanic_ids": [
       "bingo_draw",
       "solitaire_card",
@@ -158,7 +164,6 @@
       "territory_io"
     ]
   },
-
   "output_contract": {
     "note": "Every dimension must return all three fields. A score without evidence is an opinion with a number attached.",
     "fields": {
