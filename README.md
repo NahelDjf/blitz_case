@@ -332,7 +332,7 @@ now split in `rubric.json`, and only the first is the benchmark.
 
 ## Known limitations
 
-Stated deliberately. Most were found by measuring rather than by guessing.
+Most were found by measuring rather than by guessing.
 
 **Data**
 
@@ -342,8 +342,7 @@ Stated deliberately. Most were found by measuring rather than by guessing.
    measuring the cap.
 2. **One day of data.** Momentum features are defined but unpopulated — rank deltas do
    not exist on a single snapshot.
-3. **Three apps resist classification** (NoomiClone, Lordrush, 82-0.com) and are
-   handled by `data/overrides.json`, applied visibly and stamped `human_override`.
+3. **Three apps resist classification** (NoomiClone, Lordrush, 82-0.com) and are hand-labelled in data/overrides.json, applied visibly and stamped human_override. NoomiClone is deliberately left as unclassified — 318 ratings inside the US top 100 is a chart anomaly rather than a mechanic.
 
 **Measurement**
 
