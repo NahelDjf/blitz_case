@@ -4,7 +4,7 @@
 
 1,060 deposit attempts, January 2022, across Apple Pay, PayPal and bank card.
 
-Reproduce with `python3 data_analytics.py` (requires pandas).
+Reproduce with `python3 data_analytics.py`.
 
 ---
 
@@ -18,7 +18,7 @@ Reproduce with `python3 data_analytics.py` (requires pandas).
 | **Success rate** | **75.85%** |
 
 **One in four deposit attempts fails.** For a platform whose revenue starts with a
-deposit, that is the headline number — and it is not evenly distributed.
+deposit, that is the headline number.
 
 ---
 
@@ -31,11 +31,11 @@ deposit, that is the headline number — and it is not evenly distributed.
 | **Card** | **353** | **65.16** | **34.84** |
 
 Apple Pay and PayPal are statistically indistinguishable at ~19%. Card fails at
-**34.84%** — nearly twice as often.
+**34.84%**, nearly twice as often.
 
 ---
 
-## 2. Failure also rises with amount — but only apparently
+## 2. Failure also rises with amount
 
 Average amount of a failed transaction: **40.45**, against 31.1 for a successful one.
 
@@ -69,8 +69,7 @@ between 33% and 44%.
 | Amount < 40 | 787 | 20.58% |
 | Amount ≥ 40 | 273 | 34.43% |
 
-A 14-point gap. The obvious conclusion is a threshold effect around 40 — and it is
-wrong.
+A 14-point gap. The obvious first conclusion is a threshold effect around 40.
 
 ---
 
@@ -116,13 +115,12 @@ survive controlling for method.**
 
 ### Conclusion
 
-The threshold at 40 is an artefact of experimental design, not a property of the
-payment system. Card has a structurally higher failure rate (~35% vs ~19%) at every
-amount, and because card is the only method available above 40, that elevated rate is
+The threshold at 40 can not be the sole bearer of responsibility here. Card has a structurally higher failure rate (~35% vs ~19%) at every
+amount, and because card is the only method used (present in the data) above 40, that elevated rate is
 inherited by the high-amount segment rather than caused by it.
 
-**Acting on the apparent threshold — capping deposits, splitting large payments,
-adding friction above 40 — would address a symptom that does not exist and would cost
+**Acting on the apparent threshold (capping deposits), splitting large payments,
+adding friction above 40 all would address a symptom and would cost
 revenue.** The problem to fix is card.
 
 ---
@@ -133,77 +131,55 @@ revenue.** The problem to fix is card.
 |---|---|
 | Total attempted deposit value | 35,951 |
 | Value lost to failed attempts | 10,355 (28.8%) |
-| **of which card** | **7,444 (72%)** |
+| **of which 'card'** | **7,444 (72%)** |
 
 Card accounts for a third of transactions and **72% of lost deposit value**, because it
 carries both the worst failure rate and the largest amounts.
 
 If card were brought to PayPal's 19.07% failure rate, roughly **56 additional
 transactions per month would succeed, worth about 3,300** at card's mean amount of
-58.7 — around **9% of total attempted volume**, from a single workstream.
+58.7.
 
 ---
 
 ## 5. Recommended actions
 
-### Immediate — diagnose the card failures
+### Diagnose the card failures
 
 The dataset records *whether* a payment failed, not *why*. That is the first gap to
-close: instrument the card flow to capture the issuer decline code on every failure.
-Without it, any fix is guesswork. The usual distribution splits roughly into:
+close.
+Most common reasons found online:
 
-- **Insufficient funds** — a player problem, not a platform one. Fix with clearer
-  balance messaging and a retry prompt, not with engineering.
-- **3-D Secure drop-off** — the most likely candidate here, since 3DS challenges are
+- **Insufficient funds**: a player problem, not a platform one. 
+- **3-D Secure drop-off**: the most likely candidate here, since 3DS challenges are
   triggered far more often above certain amounts and are a known abandonment point.
-  Fix with a frictionless-flow exemption request, a better-designed challenge screen,
-  or a different acquirer configuration.
-- **Issuer or acquirer decline** — fix with retry logic, a second acquirer, or
+- **Issuer or acquirer decline**: fix with retry logic, a second acquirer, or
   network tokenisation.
-- **Fraud-rule false positives** — our own risk engine blocking good traffic. Worth
-  checking whether the rules are amount-indexed, which would reproduce exactly the
-  pattern seen here.
+- **Fraud-rule false positives** : our own risk engine blocking good traffic. 
 
 These need different fixes, and the decline codes tell you which.
 
-### Short term — four moves
+### Short term : four moves
 
 1. **Add a card retry path.** A declined card today appears to be a dead end. A single
    automatic retry, or a prompt to try another method, recovers a meaningful share of
    soft declines.
 2. **Offer Apple Pay and PayPal at higher amounts.** Both currently cap out well below
    card's range, and both run at ~19%. If that is a product constraint rather than a
-   provider limit, lifting it is the fastest available improvement — though it should
+   provider limit, lifting it is the fastest available improvement (though it should
    be A/B tested, since the ~19% rate is observed only at low amounts and may not hold
-   at 80.
+   at 80).
 3. **Default to the best-performing method** the player has already used, rather than
    presenting card first.
 4. **Rescue the failure moment.** A failed deposit is a player who wanted to play. A
    clear error message with a one-tap alternative method is cheap and converts.
 
-### Medium term — measure properly
+### Medium term : Monitoring
 
 - **Segment by new vs returning player.** First deposits typically fail far more often
-  than repeat ones, and the mix may differ by method. This dataset cannot tell them
-  apart.
+  than repeat ones, and the mix may differ by method, look into it.
 - **Track retry-adjusted success**, not per-attempt success. The business question is
   whether the player eventually deposits, not whether attempt #1 worked.
 - **Run a controlled test** of card at high amounts versus an alternative method at the
   same amounts. The current data cannot separate the two because the ranges do not
-  overlap — which is the central limitation of this analysis.
-
----
-
-## 6. Limitations
-
-- **One month of data** (January 2022), so no seasonality, trend, or
-  before/after comparison is possible.
-- **No failure reason.** The single most valuable missing field.
-- **No player identifier**, so new-vs-returning, retry behaviour and repeat-failure
-  concentration cannot be measured. A failure rate of 24% means something very
-  different if it is spread across 256 players or concentrated in 40.
-- **Amount ranges barely overlap across methods** — only [20, 40) has two methods
-  present, which is what makes the confound hard to resolve. Everything above 40 is a
-  single-method observation.
-- **No geography, device, issuer or currency**, all of which are standard drivers of
-  payment success.
+  overlap.
