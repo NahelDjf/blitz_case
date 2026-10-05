@@ -1,0 +1,1061 @@
+﻿Date;Method;Amount;Success?
+01/01/2022;Apple Pay;7;Yes
+01/01/2022;Apple Pay;12;Yes
+01/01/2022;Apple Pay;5;Yes
+01/01/2022;Apple Pay;12;Yes
+01/01/2022;Apple Pay;15;Yes
+01/01/2022;Apple Pay;14;Yes
+01/01/2022;Apple Pay;15;Yes
+01/01/2022;Apple Pay;14;Yes
+01/01/2022;Apple Pay;10;Yes
+01/01/2022;Apple Pay;7;Yes
+01/01/2022;Apple Pay;9;Yes
+01/01/2022;Card;86;Yes
+01/01/2022;Card;47;Yes
+01/01/2022;Card;22;Yes
+01/01/2022;Card;84;Yes
+01/01/2022;Card;50;Yes
+01/01/2022;Card;75;Yes
+01/01/2022;Card;92;Yes
+01/01/2022;Card;30;No
+01/01/2022;Card;74;No
+01/01/2022;Card;32;No
+01/01/2022;Card;89;No
+01/01/2022;PayPal;26;Yes
+01/01/2022;PayPal;28;Yes
+01/01/2022;PayPal;36;Yes
+01/01/2022;PayPal;33;Yes
+01/01/2022;PayPal;33;No
+01/01/2022;PayPal;39;No
+02/01/2022;Apple Pay;9;Yes
+02/01/2022;Apple Pay;12;Yes
+02/01/2022;Apple Pay;14;Yes
+02/01/2022;Apple Pay;7;Yes
+02/01/2022;Apple Pay;10;Yes
+02/01/2022;Apple Pay;10;Yes
+02/01/2022;Apple Pay;10;Yes
+02/01/2022;Apple Pay;8;Yes
+02/01/2022;Apple Pay;6;Yes
+02/01/2022;Apple Pay;15;Yes
+02/01/2022;Apple Pay;7;Yes
+02/01/2022;Apple Pay;9;No
+02/01/2022;Apple Pay;10;No
+02/01/2022;Apple Pay;5;No
+02/01/2022;Card;22;Yes
+02/01/2022;Card;30;Yes
+02/01/2022;Card;68;Yes
+02/01/2022;Card;99;Yes
+02/01/2022;Card;61;Yes
+02/01/2022;Card;89;Yes
+02/01/2022;Card;26;Yes
+02/01/2022;Card;33;Yes
+02/01/2022;Card;43;No
+02/01/2022;Card;90;No
+02/01/2022;Card;35;No
+02/01/2022;Card;56;No
+02/01/2022;PayPal;35;Yes
+02/01/2022;PayPal;33;Yes
+02/01/2022;PayPal;40;Yes
+02/01/2022;PayPal;38;Yes
+02/01/2022;PayPal;25;No
+02/01/2022;PayPal;29;No
+03/01/2022;Apple Pay;9;Yes
+03/01/2022;Apple Pay;6;Yes
+03/01/2022;Apple Pay;6;Yes
+03/01/2022;Apple Pay;9;Yes
+03/01/2022;Apple Pay;14;Yes
+03/01/2022;Apple Pay;9;Yes
+03/01/2022;Apple Pay;8;Yes
+03/01/2022;Apple Pay;6;Yes
+03/01/2022;Apple Pay;6;Yes
+03/01/2022;Apple Pay;15;Yes
+03/01/2022;Apple Pay;8;Yes
+03/01/2022;Apple Pay;13;No
+03/01/2022;Apple Pay;6;No
+03/01/2022;Card;67;Yes
+03/01/2022;Card;51;Yes
+03/01/2022;Card;34;Yes
+03/01/2022;Card;23;Yes
+03/01/2022;Card;66;Yes
+03/01/2022;Card;73;Yes
+03/01/2022;Card;83;Yes
+03/01/2022;Card;39;Yes
+03/01/2022;Card;82;Yes
+03/01/2022;Card;67;Yes
+03/01/2022;Card;94;Yes
+03/01/2022;Card;27;No
+03/01/2022;Card;79;No
+03/01/2022;Card;76;No
+03/01/2022;Card;81;No
+03/01/2022;Card;80;No
+03/01/2022;Card;77;No
+03/01/2022;Card;60;No
+03/01/2022;Card;95;No
+03/01/2022;PayPal;39;Yes
+03/01/2022;PayPal;39;Yes
+03/01/2022;PayPal;37;Yes
+03/01/2022;PayPal;33;Yes
+03/01/2022;PayPal;34;Yes
+03/01/2022;PayPal;25;Yes
+03/01/2022;PayPal;30;Yes
+03/01/2022;PayPal;34;Yes
+03/01/2022;PayPal;26;Yes
+03/01/2022;PayPal;34;Yes
+03/01/2022;PayPal;25;Yes
+03/01/2022;PayPal;32;Yes
+03/01/2022;PayPal;30;Yes
+03/01/2022;PayPal;33;Yes
+04/01/2022;Apple Pay;5;Yes
+04/01/2022;Apple Pay;10;Yes
+04/01/2022;Apple Pay;13;Yes
+04/01/2022;Apple Pay;5;Yes
+04/01/2022;Apple Pay;11;Yes
+04/01/2022;Apple Pay;12;Yes
+04/01/2022;Apple Pay;8;Yes
+04/01/2022;Apple Pay;5;Yes
+04/01/2022;Apple Pay;8;Yes
+04/01/2022;Apple Pay;9;Yes
+04/01/2022;Apple Pay;8;Yes
+04/01/2022;Apple Pay;9;Yes
+04/01/2022;Apple Pay;11;No
+04/01/2022;Apple Pay;11;No
+04/01/2022;Apple Pay;14;No
+04/01/2022;Apple Pay;9;No
+04/01/2022;Card;36;Yes
+04/01/2022;Card;24;Yes
+04/01/2022;Card;55;Yes
+04/01/2022;Card;85;Yes
+04/01/2022;Card;45;Yes
+04/01/2022;Card;42;Yes
+04/01/2022;Card;28;Yes
+04/01/2022;Card;65;Yes
+04/01/2022;Card;45;Yes
+04/01/2022;Card;60;Yes
+04/01/2022;Card;24;No
+04/01/2022;Card;66;No
+04/01/2022;Card;63;No
+04/01/2022;Card;49;No
+04/01/2022;Card;100;No
+04/01/2022;Card;77;No
+04/01/2022;PayPal;29;Yes
+04/01/2022;PayPal;39;Yes
+04/01/2022;PayPal;38;Yes
+04/01/2022;PayPal;40;Yes
+04/01/2022;PayPal;35;Yes
+04/01/2022;PayPal;37;Yes
+04/01/2022;PayPal;29;Yes
+04/01/2022;PayPal;29;Yes
+04/01/2022;PayPal;28;Yes
+04/01/2022;PayPal;31;Yes
+04/01/2022;PayPal;28;Yes
+04/01/2022;PayPal;34;No
+04/01/2022;PayPal;30;No
+04/01/2022;PayPal;39;No
+05/01/2022;Apple Pay;6;Yes
+05/01/2022;Apple Pay;11;Yes
+05/01/2022;Apple Pay;11;Yes
+05/01/2022;Apple Pay;5;Yes
+05/01/2022;Apple Pay;11;Yes
+05/01/2022;Apple Pay;12;Yes
+05/01/2022;Apple Pay;14;Yes
+05/01/2022;Apple Pay;6;Yes
+05/01/2022;Apple Pay;13;Yes
+05/01/2022;Apple Pay;5;Yes
+05/01/2022;Apple Pay;7;Yes
+05/01/2022;Apple Pay;14;No
+05/01/2022;Apple Pay;7;No
+05/01/2022;Card;94;Yes
+05/01/2022;Card;91;Yes
+05/01/2022;Card;75;Yes
+05/01/2022;Card;45;Yes
+05/01/2022;Card;36;No
+05/01/2022;Card;74;No
+05/01/2022;Card;69;No
+05/01/2022;Card;93;No
+05/01/2022;PayPal;40;Yes
+05/01/2022;PayPal;34;Yes
+05/01/2022;PayPal;33;Yes
+05/01/2022;PayPal;30;Yes
+05/01/2022;PayPal;34;Yes
+05/01/2022;PayPal;25;Yes
+05/01/2022;PayPal;38;Yes
+05/01/2022;PayPal;30;Yes
+05/01/2022;PayPal;27;Yes
+05/01/2022;PayPal;32;Yes
+05/01/2022;PayPal;25;Yes
+05/01/2022;PayPal;31;Yes
+05/01/2022;PayPal;38;No
+05/01/2022;PayPal;39;No
+05/01/2022;PayPal;36;No
+06/01/2022;Apple Pay;6;Yes
+06/01/2022;Apple Pay;15;Yes
+06/01/2022;Apple Pay;7;Yes
+06/01/2022;Apple Pay;15;Yes
+06/01/2022;Apple Pay;9;Yes
+06/01/2022;Apple Pay;10;No
+06/01/2022;Card;53;Yes
+06/01/2022;Card;85;Yes
+06/01/2022;Card;76;Yes
+06/01/2022;Card;40;Yes
+06/01/2022;Card;100;Yes
+06/01/2022;Card;100;Yes
+06/01/2022;Card;77;Yes
+06/01/2022;Card;22;No
+06/01/2022;Card;78;No
+06/01/2022;Card;63;No
+06/01/2022;Card;86;No
+06/01/2022;Card;44;No
+06/01/2022;PayPal;28;Yes
+06/01/2022;PayPal;34;Yes
+06/01/2022;PayPal;32;Yes
+06/01/2022;PayPal;40;Yes
+06/01/2022;PayPal;30;Yes
+06/01/2022;PayPal;32;Yes
+06/01/2022;PayPal;37;Yes
+06/01/2022;PayPal;27;Yes
+06/01/2022;PayPal;31;Yes
+06/01/2022;PayPal;29;Yes
+06/01/2022;PayPal;26;Yes
+06/01/2022;PayPal;39;Yes
+06/01/2022;PayPal;25;Yes
+06/01/2022;PayPal;27;Yes
+06/01/2022;PayPal;34;No
+07/01/2022;Apple Pay;14;Yes
+07/01/2022;Apple Pay;11;Yes
+07/01/2022;Apple Pay;6;Yes
+07/01/2022;Apple Pay;14;Yes
+07/01/2022;Apple Pay;5;Yes
+07/01/2022;Apple Pay;15;Yes
+07/01/2022;Apple Pay;7;Yes
+07/01/2022;Apple Pay;13;Yes
+07/01/2022;Apple Pay;5;Yes
+07/01/2022;Apple Pay;10;Yes
+07/01/2022;Apple Pay;8;Yes
+07/01/2022;Apple Pay;7;No
+07/01/2022;Apple Pay;10;No
+07/01/2022;Apple Pay;14;No
+07/01/2022;Card;22;Yes
+07/01/2022;Card;61;Yes
+07/01/2022;Card;42;Yes
+07/01/2022;Card;100;Yes
+07/01/2022;Card;96;Yes
+07/01/2022;Card;51;Yes
+07/01/2022;Card;75;Yes
+07/01/2022;Card;83;Yes
+07/01/2022;Card;50;Yes
+07/01/2022;Card;71;Yes
+07/01/2022;Card;60;No
+07/01/2022;Card;41;No
+07/01/2022;Card;37;No
+07/01/2022;PayPal;31;Yes
+07/01/2022;PayPal;37;Yes
+07/01/2022;PayPal;40;Yes
+07/01/2022;PayPal;35;Yes
+07/01/2022;PayPal;39;Yes
+07/01/2022;PayPal;37;Yes
+07/01/2022;PayPal;35;Yes
+07/01/2022;PayPal;30;Yes
+07/01/2022;PayPal;37;Yes
+07/01/2022;PayPal;29;Yes
+07/01/2022;PayPal;37;Yes
+07/01/2022;PayPal;39;Yes
+07/01/2022;PayPal;25;Yes
+07/01/2022;PayPal;27;Yes
+07/01/2022;PayPal;33;Yes
+07/01/2022;PayPal;38;Yes
+07/01/2022;PayPal;39;No
+07/01/2022;PayPal;31;No
+08/01/2022;Apple Pay;9;Yes
+08/01/2022;Apple Pay;15;Yes
+08/01/2022;Apple Pay;10;Yes
+08/01/2022;Apple Pay;15;Yes
+08/01/2022;Apple Pay;6;Yes
+08/01/2022;Apple Pay;12;Yes
+08/01/2022;Apple Pay;6;Yes
+08/01/2022;Apple Pay;10;Yes
+08/01/2022;Apple Pay;15;Yes
+08/01/2022;Apple Pay;6;Yes
+08/01/2022;Apple Pay;6;No
+08/01/2022;Card;80;Yes
+08/01/2022;Card;77;Yes
+08/01/2022;Card;47;Yes
+08/01/2022;Card;88;Yes
+08/01/2022;Card;99;Yes
+08/01/2022;Card;22;Yes
+08/01/2022;Card;23;Yes
+08/01/2022;Card;48;Yes
+08/01/2022;Card;90;Yes
+08/01/2022;Card;36;No
+08/01/2022;Card;22;No
+08/01/2022;Card;52;No
+08/01/2022;Card;25;No
+08/01/2022;PayPal;39;Yes
+08/01/2022;PayPal;28;Yes
+08/01/2022;PayPal;26;Yes
+08/01/2022;PayPal;39;Yes
+08/01/2022;PayPal;29;Yes
+08/01/2022;PayPal;37;Yes
+08/01/2022;PayPal;27;Yes
+08/01/2022;PayPal;30;Yes
+08/01/2022;PayPal;30;Yes
+08/01/2022;PayPal;28;Yes
+08/01/2022;PayPal;36;No
+08/01/2022;PayPal;37;No
+08/01/2022;PayPal;29;No
+09/01/2022;Apple Pay;12;Yes
+09/01/2022;Apple Pay;8;Yes
+09/01/2022;Apple Pay;6;Yes
+09/01/2022;Apple Pay;12;Yes
+09/01/2022;Apple Pay;5;Yes
+09/01/2022;Apple Pay;8;Yes
+09/01/2022;Apple Pay;8;Yes
+09/01/2022;Apple Pay;14;Yes
+09/01/2022;Apple Pay;8;Yes
+09/01/2022;Apple Pay;14;Yes
+09/01/2022;Apple Pay;8;No
+09/01/2022;Apple Pay;9;No
+09/01/2022;Card;88;Yes
+09/01/2022;Card;28;Yes
+09/01/2022;Card;26;Yes
+09/01/2022;Card;44;Yes
+09/01/2022;Card;49;Yes
+09/01/2022;Card;47;Yes
+09/01/2022;Card;49;Yes
+09/01/2022;Card;43;No
+09/01/2022;Card;60;No
+09/01/2022;Card;48;No
+09/01/2022;PayPal;26;Yes
+09/01/2022;PayPal;29;Yes
+09/01/2022;PayPal;28;Yes
+09/01/2022;PayPal;34;Yes
+09/01/2022;PayPal;35;Yes
+09/01/2022;PayPal;26;Yes
+09/01/2022;PayPal;34;Yes
+09/01/2022;PayPal;33;Yes
+09/01/2022;PayPal;31;Yes
+09/01/2022;PayPal;25;No
+09/01/2022;PayPal;28;No
+10/01/2022;Apple Pay;8;Yes
+10/01/2022;Apple Pay;15;Yes
+10/01/2022;Apple Pay;14;Yes
+10/01/2022;Apple Pay;11;Yes
+10/01/2022;Apple Pay;14;Yes
+10/01/2022;Apple Pay;13;Yes
+10/01/2022;Apple Pay;11;Yes
+10/01/2022;Apple Pay;13;No
+10/01/2022;Apple Pay;12;No
+10/01/2022;Apple Pay;7;No
+10/01/2022;Card;60;Yes
+10/01/2022;Card;97;Yes
+10/01/2022;Card;55;Yes
+10/01/2022;Card;30;Yes
+10/01/2022;Card;68;Yes
+10/01/2022;Card;21;Yes
+10/01/2022;Card;92;Yes
+10/01/2022;Card;75;Yes
+10/01/2022;Card;85;Yes
+10/01/2022;Card;38;Yes
+10/01/2022;Card;94;No
+10/01/2022;Card;31;No
+10/01/2022;Card;28;No
+10/01/2022;PayPal;33;Yes
+10/01/2022;PayPal;35;Yes
+10/01/2022;PayPal;36;Yes
+10/01/2022;PayPal;31;Yes
+10/01/2022;PayPal;29;Yes
+10/01/2022;PayPal;29;Yes
+10/01/2022;PayPal;33;Yes
+10/01/2022;PayPal;35;No
+10/01/2022;PayPal;40;No
+10/01/2022;PayPal;29;No
+10/01/2022;PayPal;30;No
+11/01/2022;Apple Pay;6;Yes
+11/01/2022;Apple Pay;11;Yes
+11/01/2022;Apple Pay;10;Yes
+11/01/2022;Apple Pay;12;Yes
+11/01/2022;Apple Pay;13;Yes
+11/01/2022;Apple Pay;5;Yes
+11/01/2022;Apple Pay;9;Yes
+11/01/2022;Apple Pay;6;Yes
+11/01/2022;Apple Pay;6;Yes
+11/01/2022;Apple Pay;9;No
+11/01/2022;Apple Pay;13;No
+11/01/2022;Apple Pay;13;No
+11/01/2022;Card;24;Yes
+11/01/2022;Card;49;Yes
+11/01/2022;Card;37;Yes
+11/01/2022;Card;42;Yes
+11/01/2022;Card;52;Yes
+11/01/2022;Card;28;No
+11/01/2022;Card;63;No
+11/01/2022;Card;42;No
+11/01/2022;Card;75;No
+11/01/2022;Card;73;No
+11/01/2022;PayPal;26;Yes
+11/01/2022;PayPal;28;Yes
+11/01/2022;PayPal;30;Yes
+11/01/2022;PayPal;39;Yes
+11/01/2022;PayPal;32;Yes
+11/01/2022;PayPal;34;Yes
+11/01/2022;PayPal;30;Yes
+11/01/2022;PayPal;40;Yes
+11/01/2022;PayPal;26;Yes
+11/01/2022;PayPal;36;Yes
+11/01/2022;PayPal;38;Yes
+11/01/2022;PayPal;39;Yes
+11/01/2022;PayPal;37;Yes
+11/01/2022;PayPal;35;Yes
+11/01/2022;PayPal;35;Yes
+11/01/2022;PayPal;34;Yes
+11/01/2022;PayPal;34;Yes
+11/01/2022;PayPal;25;Yes
+11/01/2022;PayPal;38;Yes
+11/01/2022;PayPal;39;Yes
+11/01/2022;PayPal;33;No
+12/01/2022;Apple Pay;6;Yes
+12/01/2022;Apple Pay;7;Yes
+12/01/2022;Apple Pay;8;Yes
+12/01/2022;Apple Pay;11;Yes
+12/01/2022;Apple Pay;7;Yes
+12/01/2022;Apple Pay;7;Yes
+12/01/2022;Apple Pay;12;Yes
+12/01/2022;Apple Pay;11;Yes
+12/01/2022;Apple Pay;8;Yes
+12/01/2022;Apple Pay;9;Yes
+12/01/2022;Apple Pay;11;Yes
+12/01/2022;Apple Pay;6;Yes
+12/01/2022;Card;45;Yes
+12/01/2022;Card;57;Yes
+12/01/2022;Card;95;Yes
+12/01/2022;Card;87;Yes
+12/01/2022;Card;41;Yes
+12/01/2022;Card;75;Yes
+12/01/2022;Card;65;Yes
+12/01/2022;Card;65;Yes
+12/01/2022;Card;86;Yes
+12/01/2022;Card;58;No
+12/01/2022;Card;63;No
+12/01/2022;Card;73;No
+12/01/2022;Card;86;No
+12/01/2022;Card;24;No
+12/01/2022;PayPal;30;Yes
+12/01/2022;PayPal;38;Yes
+12/01/2022;PayPal;30;Yes
+12/01/2022;PayPal;40;Yes
+12/01/2022;PayPal;32;No
+12/01/2022;PayPal;34;No
+12/01/2022;PayPal;39;No
+12/01/2022;PayPal;37;No
+12/01/2022;PayPal;30;No
+12/01/2022;PayPal;38;No
+13/01/2022;Apple Pay;11;Yes
+13/01/2022;Apple Pay;10;Yes
+13/01/2022;Apple Pay;11;Yes
+13/01/2022;Apple Pay;13;Yes
+13/01/2022;Apple Pay;11;Yes
+13/01/2022;Apple Pay;8;Yes
+13/01/2022;Apple Pay;14;Yes
+13/01/2022;Apple Pay;5;No
+13/01/2022;Card;82;Yes
+13/01/2022;Card;76;Yes
+13/01/2022;Card;85;Yes
+13/01/2022;Card;89;Yes
+13/01/2022;Card;58;Yes
+13/01/2022;Card;34;Yes
+13/01/2022;Card;55;Yes
+13/01/2022;Card;86;Yes
+13/01/2022;Card;32;Yes
+13/01/2022;Card;88;No
+13/01/2022;Card;41;No
+13/01/2022;Card;91;No
+13/01/2022;Card;38;No
+13/01/2022;PayPal;33;Yes
+13/01/2022;PayPal;36;Yes
+13/01/2022;PayPal;39;Yes
+13/01/2022;PayPal;38;Yes
+13/01/2022;PayPal;25;Yes
+13/01/2022;PayPal;27;Yes
+13/01/2022;PayPal;25;No
+13/01/2022;PayPal;38;No
+13/01/2022;PayPal;32;No
+14/01/2022;Apple Pay;15;Yes
+14/01/2022;Apple Pay;14;Yes
+14/01/2022;Apple Pay;15;Yes
+14/01/2022;Apple Pay;12;Yes
+14/01/2022;Apple Pay;8;Yes
+14/01/2022;Apple Pay;8;Yes
+14/01/2022;Apple Pay;14;Yes
+14/01/2022;Apple Pay;11;Yes
+14/01/2022;Apple Pay;14;Yes
+14/01/2022;Apple Pay;6;Yes
+14/01/2022;Apple Pay;12;Yes
+14/01/2022;Apple Pay;5;Yes
+14/01/2022;Apple Pay;7;Yes
+14/01/2022;Apple Pay;7;Yes
+14/01/2022;Apple Pay;10;Yes
+14/01/2022;Apple Pay;14;Yes
+14/01/2022;Apple Pay;14;No
+14/01/2022;Apple Pay;11;No
+14/01/2022;Apple Pay;6;No
+14/01/2022;Apple Pay;7;No
+14/01/2022;Card;47;Yes
+14/01/2022;Card;45;Yes
+14/01/2022;Card;82;Yes
+14/01/2022;Card;91;Yes
+14/01/2022;Card;70;Yes
+14/01/2022;Card;77;Yes
+14/01/2022;Card;91;Yes
+14/01/2022;Card;22;Yes
+14/01/2022;Card;64;Yes
+14/01/2022;Card;24;Yes
+14/01/2022;Card;72;No
+14/01/2022;Card;78;No
+14/01/2022;PayPal;35;Yes
+14/01/2022;PayPal;40;Yes
+14/01/2022;PayPal;33;Yes
+14/01/2022;PayPal;29;Yes
+14/01/2022;PayPal;32;Yes
+14/01/2022;PayPal;39;Yes
+14/01/2022;PayPal;38;Yes
+14/01/2022;PayPal;28;No
+14/01/2022;PayPal;32;No
+14/01/2022;PayPal;38;No
+14/01/2022;PayPal;31;No
+14/01/2022;PayPal;29;No
+15/01/2022;Apple Pay;15;Yes
+15/01/2022;Apple Pay;14;Yes
+15/01/2022;Apple Pay;6;Yes
+15/01/2022;Apple Pay;9;Yes
+15/01/2022;Apple Pay;11;Yes
+15/01/2022;Apple Pay;13;Yes
+15/01/2022;Apple Pay;13;Yes
+15/01/2022;Apple Pay;13;Yes
+15/01/2022;Apple Pay;8;Yes
+15/01/2022;Apple Pay;10;No
+15/01/2022;Card;33;Yes
+15/01/2022;Card;23;Yes
+15/01/2022;Card;44;Yes
+15/01/2022;Card;55;Yes
+15/01/2022;Card;30;Yes
+15/01/2022;Card;92;Yes
+15/01/2022;Card;77;Yes
+15/01/2022;Card;35;No
+15/01/2022;Card;29;No
+15/01/2022;PayPal;30;Yes
+15/01/2022;PayPal;35;Yes
+15/01/2022;PayPal;26;Yes
+15/01/2022;PayPal;35;Yes
+15/01/2022;PayPal;26;Yes
+15/01/2022;PayPal;38;Yes
+15/01/2022;PayPal;31;Yes
+15/01/2022;PayPal;36;Yes
+15/01/2022;PayPal;40;No
+15/01/2022;PayPal;38;No
+15/01/2022;PayPal;40;No
+15/01/2022;PayPal;32;No
+15/01/2022;PayPal;25;No
+15/01/2022;PayPal;30;No
+16/01/2022;Apple Pay;12;Yes
+16/01/2022;Apple Pay;13;Yes
+16/01/2022;Apple Pay;8;Yes
+16/01/2022;Apple Pay;5;Yes
+16/01/2022;Apple Pay;14;Yes
+16/01/2022;Apple Pay;12;Yes
+16/01/2022;Apple Pay;14;Yes
+16/01/2022;Apple Pay;13;Yes
+16/01/2022;Apple Pay;7;Yes
+16/01/2022;Apple Pay;6;Yes
+16/01/2022;Apple Pay;9;Yes
+16/01/2022;Apple Pay;9;Yes
+16/01/2022;Apple Pay;13;No
+16/01/2022;Apple Pay;11;No
+16/01/2022;Apple Pay;8;No
+16/01/2022;Card;91;Yes
+16/01/2022;Card;76;Yes
+16/01/2022;Card;96;Yes
+16/01/2022;Card;96;Yes
+16/01/2022;Card;63;Yes
+16/01/2022;Card;52;No
+16/01/2022;Card;82;No
+16/01/2022;PayPal;32;Yes
+16/01/2022;PayPal;37;Yes
+16/01/2022;PayPal;38;Yes
+16/01/2022;PayPal;33;Yes
+16/01/2022;PayPal;32;Yes
+16/01/2022;PayPal;27;Yes
+16/01/2022;PayPal;39;Yes
+16/01/2022;PayPal;37;Yes
+16/01/2022;PayPal;36;No
+16/01/2022;PayPal;28;No
+17/01/2022;Apple Pay;7;Yes
+17/01/2022;Apple Pay;10;Yes
+17/01/2022;Apple Pay;8;Yes
+17/01/2022;Apple Pay;10;Yes
+17/01/2022;Apple Pay;13;Yes
+17/01/2022;Apple Pay;9;Yes
+17/01/2022;Apple Pay;7;No
+17/01/2022;Apple Pay;10;No
+17/01/2022;Card;24;Yes
+17/01/2022;Card;92;Yes
+17/01/2022;Card;36;Yes
+17/01/2022;Card;29;No
+17/01/2022;Card;73;No
+17/01/2022;Card;52;No
+17/01/2022;Card;91;No
+17/01/2022;Card;36;No
+17/01/2022;Card;47;No
+17/01/2022;PayPal;27;Yes
+17/01/2022;PayPal;33;Yes
+17/01/2022;PayPal;27;Yes
+17/01/2022;PayPal;35;Yes
+17/01/2022;PayPal;33;Yes
+17/01/2022;PayPal;29;Yes
+17/01/2022;PayPal;28;Yes
+17/01/2022;PayPal;27;Yes
+17/01/2022;PayPal;29;Yes
+17/01/2022;PayPal;30;Yes
+17/01/2022;PayPal;35;Yes
+17/01/2022;PayPal;25;Yes
+17/01/2022;PayPal;27;Yes
+17/01/2022;PayPal;27;Yes
+17/01/2022;PayPal;30;No
+18/01/2022;Apple Pay;7;Yes
+18/01/2022;Apple Pay;5;Yes
+18/01/2022;Apple Pay;8;Yes
+18/01/2022;Apple Pay;13;Yes
+18/01/2022;Apple Pay;5;Yes
+18/01/2022;Apple Pay;13;Yes
+18/01/2022;Apple Pay;10;Yes
+18/01/2022;Apple Pay;11;Yes
+18/01/2022;Apple Pay;13;Yes
+18/01/2022;Apple Pay;6;Yes
+18/01/2022;Apple Pay;13;Yes
+18/01/2022;Apple Pay;10;No
+18/01/2022;Apple Pay;6;No
+18/01/2022;Card;44;Yes
+18/01/2022;Card;76;Yes
+18/01/2022;Card;40;Yes
+18/01/2022;Card;39;Yes
+18/01/2022;Card;61;Yes
+18/01/2022;Card;40;No
+18/01/2022;Card;100;No
+18/01/2022;PayPal;32;Yes
+18/01/2022;PayPal;35;Yes
+18/01/2022;PayPal;36;Yes
+18/01/2022;PayPal;29;Yes
+18/01/2022;PayPal;37;Yes
+18/01/2022;PayPal;37;Yes
+18/01/2022;PayPal;28;Yes
+18/01/2022;PayPal;36;Yes
+18/01/2022;PayPal;37;Yes
+18/01/2022;PayPal;32;Yes
+18/01/2022;PayPal;38;Yes
+18/01/2022;PayPal;28;Yes
+18/01/2022;PayPal;29;Yes
+18/01/2022;PayPal;35;No
+18/01/2022;PayPal;25;No
+19/01/2022;Apple Pay;5;Yes
+19/01/2022;Apple Pay;6;Yes
+19/01/2022;Apple Pay;6;Yes
+19/01/2022;Apple Pay;5;Yes
+19/01/2022;Apple Pay;14;Yes
+19/01/2022;Apple Pay;13;Yes
+19/01/2022;Apple Pay;8;Yes
+19/01/2022;Apple Pay;5;Yes
+19/01/2022;Apple Pay;8;Yes
+19/01/2022;Apple Pay;12;Yes
+19/01/2022;Apple Pay;14;No
+19/01/2022;Apple Pay;6;No
+19/01/2022;Card;26;Yes
+19/01/2022;Card;26;Yes
+19/01/2022;Card;27;Yes
+19/01/2022;Card;72;Yes
+19/01/2022;Card;26;Yes
+19/01/2022;Card;31;Yes
+19/01/2022;Card;95;Yes
+19/01/2022;Card;80;Yes
+19/01/2022;Card;23;Yes
+19/01/2022;Card;79;No
+19/01/2022;Card;69;No
+19/01/2022;Card;91;No
+19/01/2022;PayPal;40;Yes
+19/01/2022;PayPal;26;Yes
+19/01/2022;PayPal;38;Yes
+19/01/2022;PayPal;27;Yes
+19/01/2022;PayPal;40;Yes
+19/01/2022;PayPal;38;Yes
+19/01/2022;PayPal;28;Yes
+19/01/2022;PayPal;37;Yes
+19/01/2022;PayPal;28;Yes
+19/01/2022;PayPal;38;Yes
+19/01/2022;PayPal;36;Yes
+19/01/2022;PayPal;27;Yes
+19/01/2022;PayPal;36;Yes
+19/01/2022;PayPal;26;Yes
+19/01/2022;PayPal;25;Yes
+19/01/2022;PayPal;27;No
+19/01/2022;PayPal;39;No
+19/01/2022;PayPal;36;No
+20/01/2022;Apple Pay;14;Yes
+20/01/2022;Apple Pay;11;Yes
+20/01/2022;Apple Pay;5;Yes
+20/01/2022;Apple Pay;13;Yes
+20/01/2022;Apple Pay;7;Yes
+20/01/2022;Apple Pay;5;No
+20/01/2022;Apple Pay;11;No
+20/01/2022;Card;32;Yes
+20/01/2022;Card;47;Yes
+20/01/2022;Card;35;Yes
+20/01/2022;Card;20;Yes
+20/01/2022;Card;79;Yes
+20/01/2022;Card;55;Yes
+20/01/2022;Card;47;Yes
+20/01/2022;Card;22;Yes
+20/01/2022;Card;80;Yes
+20/01/2022;Card;98;No
+20/01/2022;Card;68;No
+20/01/2022;Card;79;No
+20/01/2022;Card;81;No
+20/01/2022;PayPal;26;Yes
+20/01/2022;PayPal;31;Yes
+20/01/2022;PayPal;29;Yes
+20/01/2022;PayPal;32;Yes
+20/01/2022;PayPal;36;Yes
+20/01/2022;PayPal;39;Yes
+20/01/2022;PayPal;39;Yes
+20/01/2022;PayPal;27;Yes
+20/01/2022;PayPal;26;No
+20/01/2022;PayPal;28;No
+20/01/2022;PayPal;36;No
+20/01/2022;PayPal;30;No
+20/01/2022;PayPal;36;No
+21/01/2022;Apple Pay;10;Yes
+21/01/2022;Apple Pay;15;Yes
+21/01/2022;Apple Pay;5;Yes
+21/01/2022;Apple Pay;12;Yes
+21/01/2022;Apple Pay;6;Yes
+21/01/2022;Apple Pay;9;Yes
+21/01/2022;Apple Pay;7;Yes
+21/01/2022;Apple Pay;14;Yes
+21/01/2022;Apple Pay;6;No
+21/01/2022;Card;45;Yes
+21/01/2022;Card;61;Yes
+21/01/2022;Card;86;Yes
+21/01/2022;Card;87;Yes
+21/01/2022;Card;53;Yes
+21/01/2022;Card;82;No
+21/01/2022;Card;23;No
+21/01/2022;PayPal;26;Yes
+21/01/2022;PayPal;29;Yes
+21/01/2022;PayPal;37;Yes
+21/01/2022;PayPal;37;Yes
+21/01/2022;PayPal;35;No
+21/01/2022;PayPal;37;No
+21/01/2022;PayPal;29;No
+22/01/2022;Apple Pay;12;Yes
+22/01/2022;Apple Pay;11;Yes
+22/01/2022;Apple Pay;14;Yes
+22/01/2022;Apple Pay;13;Yes
+22/01/2022;Apple Pay;10;Yes
+22/01/2022;Apple Pay;10;Yes
+22/01/2022;Apple Pay;7;Yes
+22/01/2022;Apple Pay;10;No
+22/01/2022;Apple Pay;6;No
+22/01/2022;Card;40;Yes
+22/01/2022;Card;41;Yes
+22/01/2022;Card;50;Yes
+22/01/2022;Card;64;Yes
+22/01/2022;Card;95;No
+22/01/2022;Card;53;No
+22/01/2022;PayPal;31;Yes
+22/01/2022;PayPal;31;Yes
+22/01/2022;PayPal;26;Yes
+22/01/2022;PayPal;26;Yes
+22/01/2022;PayPal;26;Yes
+22/01/2022;PayPal;25;Yes
+22/01/2022;PayPal;26;Yes
+22/01/2022;PayPal;27;Yes
+22/01/2022;PayPal;27;No
+22/01/2022;PayPal;34;No
+22/01/2022;PayPal;30;No
+23/01/2022;Apple Pay;7;Yes
+23/01/2022;Apple Pay;5;Yes
+23/01/2022;Apple Pay;5;Yes
+23/01/2022;Apple Pay;12;Yes
+23/01/2022;Apple Pay;9;Yes
+23/01/2022;Apple Pay;7;Yes
+23/01/2022;Apple Pay;9;Yes
+23/01/2022;Apple Pay;15;Yes
+23/01/2022;Apple Pay;15;Yes
+23/01/2022;Apple Pay;14;Yes
+23/01/2022;Apple Pay;15;No
+23/01/2022;Card;26;Yes
+23/01/2022;Card;90;Yes
+23/01/2022;Card;100;Yes
+23/01/2022;Card;91;Yes
+23/01/2022;Card;77;Yes
+23/01/2022;Card;86;Yes
+23/01/2022;Card;45;Yes
+23/01/2022;Card;82;Yes
+23/01/2022;Card;49;Yes
+23/01/2022;Card;90;No
+23/01/2022;Card;51;No
+23/01/2022;Card;48;No
+23/01/2022;Card;57;No
+23/01/2022;Card;70;No
+23/01/2022;PayPal;28;Yes
+23/01/2022;PayPal;26;Yes
+23/01/2022;PayPal;35;Yes
+23/01/2022;PayPal;39;Yes
+23/01/2022;PayPal;31;Yes
+23/01/2022;PayPal;38;Yes
+23/01/2022;PayPal;32;Yes
+23/01/2022;PayPal;33;Yes
+23/01/2022;PayPal;31;Yes
+23/01/2022;PayPal;38;Yes
+23/01/2022;PayPal;38;Yes
+23/01/2022;PayPal;34;Yes
+23/01/2022;PayPal;28;Yes
+23/01/2022;PayPal;39;No
+23/01/2022;PayPal;32;No
+24/01/2022;Apple Pay;14;Yes
+24/01/2022;Apple Pay;13;Yes
+24/01/2022;Apple Pay;7;Yes
+24/01/2022;Apple Pay;5;Yes
+24/01/2022;Apple Pay;14;Yes
+24/01/2022;Apple Pay;9;Yes
+24/01/2022;Apple Pay;15;Yes
+24/01/2022;Apple Pay;15;Yes
+24/01/2022;Apple Pay;9;Yes
+24/01/2022;Card;90;Yes
+24/01/2022;Card;37;Yes
+24/01/2022;Card;58;Yes
+24/01/2022;Card;35;Yes
+24/01/2022;Card;99;Yes
+24/01/2022;Card;34;Yes
+24/01/2022;Card;75;Yes
+24/01/2022;Card;91;Yes
+24/01/2022;Card;57;No
+24/01/2022;Card;36;No
+24/01/2022;PayPal;39;Yes
+24/01/2022;PayPal;29;Yes
+24/01/2022;PayPal;29;Yes
+24/01/2022;PayPal;30;Yes
+24/01/2022;PayPal;31;Yes
+24/01/2022;PayPal;27;Yes
+24/01/2022;PayPal;32;Yes
+24/01/2022;PayPal;30;Yes
+24/01/2022;PayPal;29;Yes
+24/01/2022;PayPal;39;Yes
+24/01/2022;PayPal;26;Yes
+24/01/2022;PayPal;35;Yes
+24/01/2022;PayPal;25;Yes
+24/01/2022;PayPal;32;Yes
+25/01/2022;Apple Pay;13;Yes
+25/01/2022;Apple Pay;13;Yes
+25/01/2022;Apple Pay;5;Yes
+25/01/2022;Apple Pay;10;Yes
+25/01/2022;Apple Pay;8;Yes
+25/01/2022;Apple Pay;14;Yes
+25/01/2022;Apple Pay;11;Yes
+25/01/2022;Apple Pay;10;Yes
+25/01/2022;Apple Pay;5;No
+25/01/2022;Apple Pay;14;No
+25/01/2022;Apple Pay;12;No
+25/01/2022;Card;29;Yes
+25/01/2022;Card;23;Yes
+25/01/2022;Card;52;Yes
+25/01/2022;Card;96;Yes
+25/01/2022;Card;82;Yes
+25/01/2022;Card;24;Yes
+25/01/2022;Card;73;Yes
+25/01/2022;Card;91;Yes
+25/01/2022;Card;39;Yes
+25/01/2022;Card;58;Yes
+25/01/2022;Card;65;Yes
+25/01/2022;Card;52;Yes
+25/01/2022;Card;29;Yes
+25/01/2022;Card;22;Yes
+25/01/2022;Card;98;No
+25/01/2022;Card;85;No
+25/01/2022;Card;92;No
+25/01/2022;Card;47;No
+25/01/2022;PayPal;36;Yes
+25/01/2022;PayPal;37;Yes
+25/01/2022;PayPal;31;Yes
+25/01/2022;PayPal;40;Yes
+25/01/2022;PayPal;28;Yes
+25/01/2022;PayPal;33;Yes
+25/01/2022;PayPal;39;Yes
+25/01/2022;PayPal;33;Yes
+25/01/2022;PayPal;28;Yes
+25/01/2022;PayPal;25;Yes
+25/01/2022;PayPal;26;Yes
+25/01/2022;PayPal;38;No
+26/01/2022;Apple Pay;15;Yes
+26/01/2022;Apple Pay;14;Yes
+26/01/2022;Apple Pay;12;Yes
+26/01/2022;Apple Pay;6;Yes
+26/01/2022;Apple Pay;6;No
+26/01/2022;Apple Pay;11;No
+26/01/2022;Card;56;Yes
+26/01/2022;Card;51;Yes
+26/01/2022;Card;67;Yes
+26/01/2022;Card;26;Yes
+26/01/2022;Card;29;Yes
+26/01/2022;Card;44;Yes
+26/01/2022;Card;52;Yes
+26/01/2022;Card;52;Yes
+26/01/2022;Card;21;Yes
+26/01/2022;Card;31;Yes
+26/01/2022;Card;33;No
+26/01/2022;Card;46;No
+26/01/2022;Card;84;No
+26/01/2022;Card;52;No
+26/01/2022;Card;87;No
+26/01/2022;Card;76;No
+26/01/2022;Card;55;No
+26/01/2022;Card;96;No
+26/01/2022;PayPal;28;Yes
+26/01/2022;PayPal;40;Yes
+26/01/2022;PayPal;38;Yes
+26/01/2022;PayPal;30;Yes
+26/01/2022;PayPal;30;Yes
+26/01/2022;PayPal;26;Yes
+26/01/2022;PayPal;28;Yes
+26/01/2022;PayPal;31;Yes
+26/01/2022;PayPal;26;Yes
+26/01/2022;PayPal;32;Yes
+26/01/2022;PayPal;28;No
+27/01/2022;Apple Pay;7;Yes
+27/01/2022;Apple Pay;7;Yes
+27/01/2022;Apple Pay;5;Yes
+27/01/2022;Apple Pay;7;Yes
+27/01/2022;Apple Pay;14;Yes
+27/01/2022;Apple Pay;11;No
+27/01/2022;Apple Pay;5;No
+27/01/2022;Apple Pay;10;No
+27/01/2022;Apple Pay;15;No
+27/01/2022;Apple Pay;5;No
+27/01/2022;Apple Pay;9;No
+27/01/2022;Card;30;Yes
+27/01/2022;Card;41;Yes
+27/01/2022;Card;23;Yes
+27/01/2022;Card;47;Yes
+27/01/2022;Card;98;Yes
+27/01/2022;Card;65;Yes
+27/01/2022;Card;33;Yes
+27/01/2022;Card;83;Yes
+27/01/2022;Card;59;Yes
+27/01/2022;Card;69;Yes
+27/01/2022;Card;83;No
+27/01/2022;Card;25;No
+27/01/2022;Card;44;No
+27/01/2022;Card;32;No
+27/01/2022;Card;64;No
+27/01/2022;PayPal;30;Yes
+27/01/2022;PayPal;39;Yes
+27/01/2022;PayPal;33;Yes
+27/01/2022;PayPal;25;Yes
+27/01/2022;PayPal;36;Yes
+27/01/2022;PayPal;30;Yes
+27/01/2022;PayPal;36;Yes
+27/01/2022;PayPal;26;Yes
+27/01/2022;PayPal;32;No
+28/01/2022;Apple Pay;7;Yes
+28/01/2022;Apple Pay;15;Yes
+28/01/2022;Apple Pay;8;Yes
+28/01/2022;Apple Pay;11;Yes
+28/01/2022;Apple Pay;9;Yes
+28/01/2022;Apple Pay;10;Yes
+28/01/2022;Apple Pay;10;Yes
+28/01/2022;Apple Pay;7;Yes
+28/01/2022;Apple Pay;11;Yes
+28/01/2022;Apple Pay;13;Yes
+28/01/2022;Apple Pay;10;Yes
+28/01/2022;Apple Pay;6;No
+28/01/2022;Apple Pay;9;No
+28/01/2022;Apple Pay;14;No
+28/01/2022;Card;23;Yes
+28/01/2022;Card;46;Yes
+28/01/2022;Card;20;Yes
+28/01/2022;Card;30;Yes
+28/01/2022;Card;53;Yes
+28/01/2022;Card;50;No
+28/01/2022;Card;51;No
+28/01/2022;Card;39;No
+28/01/2022;Card;92;No
+28/01/2022;Card;95;No
+28/01/2022;Card;85;No
+28/01/2022;Card;28;No
+28/01/2022;PayPal;25;Yes
+28/01/2022;PayPal;36;Yes
+28/01/2022;PayPal;33;Yes
+28/01/2022;PayPal;27;Yes
+28/01/2022;PayPal;30;Yes
+28/01/2022;PayPal;34;Yes
+28/01/2022;PayPal;31;No
+29/01/2022;Apple Pay;8;Yes
+29/01/2022;Apple Pay;7;Yes
+29/01/2022;Apple Pay;10;Yes
+29/01/2022;Apple Pay;5;Yes
+29/01/2022;Apple Pay;7;Yes
+29/01/2022;Apple Pay;9;Yes
+29/01/2022;Apple Pay;11;Yes
+29/01/2022;Apple Pay;9;Yes
+29/01/2022;Apple Pay;6;Yes
+29/01/2022;Apple Pay;11;Yes
+29/01/2022;Apple Pay;11;Yes
+29/01/2022;Apple Pay;10;Yes
+29/01/2022;Apple Pay;5;No
+29/01/2022;Card;98;Yes
+29/01/2022;Card;27;Yes
+29/01/2022;Card;42;Yes
+29/01/2022;Card;40;Yes
+29/01/2022;Card;30;Yes
+29/01/2022;Card;68;Yes
+29/01/2022;Card;66;Yes
+29/01/2022;Card;27;Yes
+29/01/2022;Card;26;No
+29/01/2022;Card;65;No
+29/01/2022;Card;100;No
+29/01/2022;Card;28;No
+29/01/2022;PayPal;36;Yes
+29/01/2022;PayPal;40;Yes
+29/01/2022;PayPal;38;Yes
+29/01/2022;PayPal;39;Yes
+29/01/2022;PayPal;32;Yes
+29/01/2022;PayPal;35;Yes
+29/01/2022;PayPal;25;Yes
+29/01/2022;PayPal;25;Yes
+29/01/2022;PayPal;37;Yes
+29/01/2022;PayPal;35;Yes
+29/01/2022;PayPal;31;Yes
+29/01/2022;PayPal;37;No
+30/01/2022;Apple Pay;15;Yes
+30/01/2022;Apple Pay;7;Yes
+30/01/2022;Apple Pay;13;Yes
+30/01/2022;Apple Pay;15;Yes
+30/01/2022;Apple Pay;6;Yes
+30/01/2022;Apple Pay;8;Yes
+30/01/2022;Apple Pay;7;Yes
+30/01/2022;Apple Pay;11;No
+30/01/2022;Apple Pay;6;No
+30/01/2022;Apple Pay;10;No
+30/01/2022;Card;76;Yes
+30/01/2022;Card;30;Yes
+30/01/2022;Card;80;Yes
+30/01/2022;Card;95;No
+30/01/2022;Card;68;No
+30/01/2022;Card;34;No
+30/01/2022;Card;27;No
+30/01/2022;Card;31;No
+30/01/2022;PayPal;40;Yes
+30/01/2022;PayPal;30;Yes
+30/01/2022;PayPal;32;Yes
+30/01/2022;PayPal;28;Yes
+30/01/2022;PayPal;38;Yes
+30/01/2022;PayPal;25;Yes
+30/01/2022;PayPal;39;Yes
+30/01/2022;PayPal;34;Yes
+30/01/2022;PayPal;39;No
