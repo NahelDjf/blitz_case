@@ -9,7 +9,7 @@ data/apps/metadata.jsonl, keyed by app_id, and refreshed only when stale -
 so re-running is nearly free.
 
 Fields kept are the ones the scoring actually consumes:
-  description            -> mechanic extraction (what loop is this?)
+  description            -> mechanic extraction
   userRatingCount        -> review-velocity proxy for install volume
   releaseDate            -> mechanic freshness
   currentVersionReleaseDate / releaseNotes -> live-ops cadence

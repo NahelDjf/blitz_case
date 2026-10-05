@@ -17,7 +17,7 @@ it has 13 carriers and a #7 grossing slot, and it would be useless advice.
 No single opaque number is reported without its parts. Weights are CLI flags
 so a designer can disagree with them.
 
-Deterministic, no API calls, instant. Run it as often as you like.
+Deterministic, no API calls, instant. 
 """
 
 from __future__ import annotations

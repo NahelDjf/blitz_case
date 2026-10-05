@@ -7,8 +7,8 @@ Reviews are the only free source of player *voice*, which is where the
 differentiating signals live: competitive intent ("I wish I could play
 against people"), fairness complaints ("bots", "rigged"), and ad fatigue.
 
-Scope is US top_free + top_grossing by default - the analysis scope from
-DECISIONS.md section 4 - which is roughly 150 unique apps rather than the
+Scope is US top_free + top_grossing by default (the analysis scope from
+DECISIONS.md) which is roughly 150 unique apps rather than the
 ~700 charting worldwide. At one request per page per app, that difference is
 the difference between a five-minute run and an hour of hammering Apple.
 
@@ -135,8 +135,7 @@ def main() -> int:
             # The tell: an exhausting feed returns a PARTIAL page first. So an
             # empty page is only suspicious when the previous page was full -
             # which is exactly the case where the cached total lands on an
-            # exact multiple of 50. Retry only there, so genuinely short apps
-            # cost no extra requests.
+            # exact multiple of 50. 
             previous_was_full = collected and len(collected) % PAGE_SIZE == 0
             if not page_rows and (page == 1 or previous_was_full):
                 alternate = "mosthelpful" if args.sort == "mostrecent" else "mostrecent"

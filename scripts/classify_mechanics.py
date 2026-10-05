@@ -4,17 +4,12 @@
 Design notes:
 
 * The taxonomy sits in the system prompt behind a cache_control breakpoint.
-  It is ~3k tokens and identical on every call, so it is paid for once at
-  write price and then read at a tenth of the input rate.
 * Apps are sent in batches so the cached prefix is amortised over several
   classifications per call.
 * Results cache per app ID in data/mechanics/assignments.jsonl. Re-running
   after a new chart snapshot classifies only the apps that newly appeared.
 * Unknown mechanic IDs from the model are coerced to "other" rather than
-  trusted. A model inventing a category is a taxonomy gap to review by hand,
-  not a silent new class.
-* Token usage is accumulated and a cost estimate printed, because "what did
-  this run cost" is an operational question the README should answer.
+  trusted.
 
 Requires ANTHROPIC_API_KEY in the environment.
 """
@@ -53,8 +48,7 @@ A merge game themed around cooking is still a merge game.
 - Assign a primary mechanic. Assign a secondary ONLY when the app genuinely \
 runs two distinct loops (for example a match-3 core wrapped in a renovation \
 meta). Otherwise set secondary to null.
-- If no mechanic in the taxonomy fits, use "other". Do not invent new IDs and \
-do not force a bad fit. "other" is a useful signal that the taxonomy has a gap.
+- If no mechanic in the taxonomy fits, use "other". "other" is a useful signal that the taxonomy has a gap.
 - confidence is your own 1-5 rating of how certain the assignment is, where 5 \
 means the description states the loop plainly and 1 means you are inferring \
 from the title alone.

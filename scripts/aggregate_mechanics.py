@@ -30,8 +30,7 @@ from datetime import datetime, timezone
 
 from common import DATA_DIR, latest_chart_file, read_jsonl, write_jsonl
 
-# Titles that advertise cash play. Deterministic and auditable on purpose -
-# no LLM call, and the rule can be read and argued with.
+# Titles that advertise cash play. Deterministic and auditable
 CASH_TITLE_PATTERN = re.compile(
     r"win real (cash|money)|real cash|real money|cash tournament|win cash",
     re.IGNORECASE,
@@ -105,7 +104,7 @@ def main() -> int:
     metadata = {r["app_id"]: r for r in read_jsonl(DATA_DIR / "apps" / "metadata.jsonl")}
     assignments = {r["app_id"]: r for r in read_jsonl(DATA_DIR / "mechanics" / "assignments.jsonl")}
 
-    # Optional hand-labelled corrections, applied visibly rather than silently.
+    # Optional hand-labelled corrections.
     overrides_path = DATA_DIR / "overrides.json"
     overrides = {}
     if overrides_path.exists():
@@ -124,9 +123,7 @@ def main() -> int:
         chart = row["chart"]
         app_ranks[chart] = min(app_ranks.get(chart, 999), row["rank"])
 
-    # Coverage is reported loudly. Each stage of the pipeline can run against
-    # a different snapshot, and an analysis that quietly covers 150 of 162 apps
-    # is worse than one that refuses to run.
+
     missing_metadata = sorted(a for a in ranks if a not in metadata)
     missing_assignment = sorted(
         a for a in ranks if a in metadata and a not in assignments
@@ -239,11 +236,7 @@ def main() -> int:
                 "n_in_grossing": len(grossing_ranks),
                 "publisher_hhi": herfindahl([a["publisher"] for a in primaries if a["publisher"]]),
                 "distinct_publishers": len({a["publisher"] for a in primaries if a["publisher"]}),
-                # Informational only, deliberately NOT scored: App Store ratings are
-                # compressed by prompt-gating (observed range 4.0-4.93, nearly all
-                # between 4.6 and 4.9), so "high rank + mediocre rating = unmet
-                # demand" has no signal to detect here. Unmet demand comes from
-                # review text instead.
+                # Informational only, deliberately NOT scored cf readme.
                 "mean_rating": round(sum(ratings) / len(ratings), 2) if ratings else None,
                 "median_rating_count": median([a["rating_count"] for a in primaries]),
                 "median_age_days": median(ages),

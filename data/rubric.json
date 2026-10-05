@@ -1,7 +1,7 @@
 {
   "version": "2026-10-03",
   "notes": "Scores how convertible a mechanic is into a Blitz cash tournament. Two kinds of dimension: GATES, where a low score disqualifies the mechanic outright no matter how well it does elsewhere, and WEIGHTED dimensions that trade off against each other. Written as data rather than prose inside a prompt so the criteria can be reviewed, versioned and argued with. Every score must carry a justification and the app_id of a carrier that evidences it.",
-  "gating_rule": "If any gate dimension scores <= its fail_below value, convertibility_total is set to 0 and the mechanic is reported as REJECTED with the failing gate named. Gates are not averaged in - a mechanic that cannot be run fairly is not partially convertible.",
+  "gating_rule": "If any gate dimension scores <= its fail_below value, convertibility_total is set to 0 and the mechanic is reported as REJECTED with the failing gate named. Gates are not averaged in: a mechanic that cannot be run fairly is not partially convertible.",
   "dimensions": [
     {
       "id": "symmetric_seeding",

@@ -15,11 +15,9 @@ Design:
 * Every mechanic is scored N times (default 3). The spread across runs is
   the confidence signal: 4/4/4 means the model understands the mechanic,
   5/2/4 means the taxonomy entry is ambiguous, the mechanic genuinely varies
-  across its carriers, or the rubric wording is vague. All three are worth
-  knowing, and all three are invisible if you score once.
+  across its carriers, or the rubric wording is vague. 
 * Each dimension must return a score, a justification, and the app_id of a
-  carrier that evidences it. A score without evidence is an opinion with a
-  number attached.
+  carrier that evidences it. 
 
 Note: current Sonnet and Opus models no longer accept a temperature
 parameter, so run-to-run spread measures genuine judgement stability rather

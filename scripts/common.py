@@ -1,9 +1,3 @@
-"""Shared helpers: polite HTTP with retries, repo paths, JSONL I/O.
-
-Stdlib only, on purpose. Nothing here needs installing, so the daily GitHub
-Action has no dependency resolution step to fail on.
-"""
-
 from __future__ import annotations
 
 import json
@@ -27,9 +21,6 @@ MAX_ATTEMPTS = 3
 
 def fetch_json(url: str, timeout: int = TIMEOUT_S, max_attempts: int = MAX_ATTEMPTS) -> dict:
     """GET a JSON document, retrying transient failures with backoff.
-
-    Raises RuntimeError with a readable message if every attempt fails, so
-    callers can record the reason instead of crashing the whole run.
     """
     last_error: Exception | None = None
     for attempt in range(1, max_attempts + 1):
@@ -55,11 +46,6 @@ def fetch_json(url: str, timeout: int = TIMEOUT_S, max_attempts: int = MAX_ATTEM
 def post_json(url: str, payload: dict, headers: dict, timeout: int = 120,
               max_attempts: int = MAX_ATTEMPTS) -> dict:
     """POST JSON and return the parsed JSON response, retrying transient errors.
-
-    Used for the Anthropic API. Kept on urllib rather than the SDK so the whole
-    project installs nothing - "easy to run locally" is one of the grading
-    criteria, and `python3 scripts/x.py` with a bare interpreter is as easy as
-    it gets. The retry/backoff behaviour we need already lives here.
     """
     body = json.dumps(payload).encode("utf-8")
     all_headers = {"Content-Type": "application/json", "User-Agent": USER_AGENT}

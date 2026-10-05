@@ -15,9 +15,6 @@ Two sources, in priority order:
 Output: data/charts/<YYYY-MM-DD>.jsonl, one record per (source, country,
 chart, rank). Re-running on the same day overwrites that day's file, so the
 job is idempotent.
-
-Stdlib only, on purpose: no dependency resolution in CI means fewer ways for
-the daily job to break silently.
 """
 
 from __future__ import annotations
