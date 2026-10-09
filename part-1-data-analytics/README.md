@@ -17,8 +17,7 @@ Reproduce with `python3 data_analytics.py`.
 | Failed | 256 |
 | **Success rate** | **75.85%** |
 
-**One in four deposit attempts fails.** For a platform whose revenue starts with a
-deposit, that is the headline number.
+**One in four deposit attempts fails.**
 
 ---
 
